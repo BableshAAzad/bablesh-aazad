@@ -10,6 +10,9 @@
   z-index: 999;
   border-radius: 15px 50px;
 }
+.btn--medium {
+  margin-bottom: 15px;
+}
 
 .navbar-container {
   display: flex;
@@ -28,12 +31,13 @@
   font-size: 2rem;
   display: flex;
   align-items: center;
-} 
-
-.fa-typo3 {
-  margin-left: 0.5rem;
-  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 13px;
 }
+.navbar-logo:hover{
+  color: white;
+  text-decoration: none;
+} 
 
 .nav-menu {
   display: grid;
@@ -60,6 +64,8 @@
 }
 
 .nav-links:hover {
+  color: white;
+  text-decoration: none;
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
 }
@@ -129,15 +135,17 @@
     transform: translate(25%, 50%);
     font-size: 1.6rem;
     margin-left: 0;
+    line-height: 1.2;
   }
 
   .menu-icon {
     display: block;
     position: absolute;
-    top: 0;
+    /* top: 0; */
+    margin-bottom: 52PX;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     cursor: pointer;
   }
 
@@ -171,5 +179,6 @@
     color: #ffffff;
     transition: 250ms;
     border-radius: 10px 50px;
+    text-decoration: none;
   }
 }

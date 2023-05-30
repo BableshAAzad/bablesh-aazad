@@ -1,0 +1,9 @@
+.textAbout{
+    border-radius: 50px 10px;
+}
+.textAboutLink:hover{
+    color: rgb(0, 0, 0);
+}
+.textAboutLink{
+    color: white;
+}
