@@ -12,7 +12,7 @@
   .home,
   .services,
   .products,
-  .sign-up {
+  .signUp {
     display: flex;
     height: 90vh;
     align-items: center;
@@ -30,7 +30,7 @@
   } */
   
   .products {
-    background-image: url('/public/images/img-1.jpg');
+    background-image: url('./images/img-1.jpg');
     background-position: center;
     background-size: fill;
     background-repeat: no-repeat;
@@ -38,8 +38,8 @@
     font-size: 100px;
   }
 
-  .sign-up {
-    background-image: url('/public/images/img-8.jpg');
+  .signUp {
+    background-image: url('./images/img-8.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

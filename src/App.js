@@ -5,11 +5,12 @@ import Home from './components/pages/Home'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Services from './components/pages/Services';
 import Products from './components/pages/Products';
-import SignUp from './components/pages/Products';
 import Error from './components/Error';
 import Projects from './components/Projects';
 import About from './Projects/TextEditor/About';
-import TextForm from './Projects/TextEditor/TextForm'
+import TextForm from './Projects/TextEditor/TextForm';
+import LogIn from './components/pages/LogIn';
+import WordBreak from './components/WordBreak';
 
 
 function App() {
@@ -18,14 +19,15 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' exact element={<Home />}></Route>
-          <Route path='/services' exact element={<Services />}></Route>
-          <Route path='/products' exact element={<Products />}></Route>
-          <Route path='/sign-up' exact element={<SignUp />}></Route>
-          <Route path='/projects' exact element={<Projects />}></Route>
-          <Route path='/about' exact element={<About />}></Route>
-          <Route path='/textForm' exact element={<TextForm/>}></Route>
-          <Route path='*' exact element={<Error />}></Route>
+          <Route exact path='/' element={<Home />}></Route>
+          <Route exact path='/services' element={<Services />}></Route>
+          <Route exact path='/products' element={<Products />}></Route>
+          <Route exact path='/projects' element={<Projects />}></Route>
+          <Route exact path='/about' element={<About />}></Route>
+          <Route exact path='/textForm' element={<TextForm/>}></Route>
+          <Route exact path='/logIn' element={<LogIn></LogIn>}></Route>
+          <Route exact path='/wordBreak' element={<WordBreak></WordBreak>}></Route>
+          <Route exact path='*' element={<Error />}></Route>
         </Routes>
       </Router>
     </>

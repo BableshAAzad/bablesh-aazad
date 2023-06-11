@@ -2,12 +2,13 @@ import React from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
+import p9 from './../images/p9.jpg';
 
 function HeroSection() {
   return (
     <div className='hero-container'>
       {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
-      <img src="/images/p9.jpg" alt="BableshAAzad" />
+      <img src={p9} alt="BableshAAzad" />
       <h2 className='my-2'>Affordable Website</h2>
       <p>Want Your Own Website ?</p>
       <div className='hero-btns'>

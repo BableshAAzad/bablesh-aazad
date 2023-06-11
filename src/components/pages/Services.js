@@ -1,57 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Services.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import p4 from './../../images/p4.jpg';
+import p5 from './../../images/p5.jpg';
+import p6 from './../../images/p6.jpg';
 
 export default function Services() {
-  return (
-    <div>
+    const fullText = "There Designing to various types of website static or dynamic and non-commerce or woo-commerce site etc. and also give daily requirement base service to data or product management."; // Replace with your actual text
+    const fullText1 = "";
+    const maxVisibleWords = 10;
 
+    const words = fullText.split(' ');
+    const visibleWords = words.slice(0, maxVisibleWords).join(' ');
+    const hiddenWords = words.slice(maxVisibleWords).join(' ');
 
-      <div className="container mt-3 websi1">
-        <div className="jumbotron">
-        <img src="../images/p3.jpg" className="card-img-top" alt="BableshAAzad" />
-          <h3 className='text-break text-primary'>Welcome to BableshAAzad.com</h3>
-          <p className="lead">This is wonderful place for learning</p>
-          {/* <hr className="my-4" /> */}
-          <p>here, you can learn programing languages</p>
-          <a className="btn btn-outline-primary btn-sm shadow" href="https://www.google.com/maps/place/ritesh/@21.2640812,81.6057601,19z/data=!4m6!3m5!1s0x3a28ddb496c9d577:0x5024e9ce26ee67a8!8m2!3d21.2641144!4d81.6055072!16s%2Fg%2F11fl5rsqt_" target="_blank" rel="noreferrer">View On Google Maps</a>
-        </div>
-      </div>
+    const [isHiddenVisible, setIsHiddenVisible] = useState(false);
 
-      <center>
-        <div className="container card-deck">
-            <img src="salesforcec2.PNG" className="card-img-top m-2" width="140px" height="140px" alt="BableshAAzad" />
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title">Website Purpose</h5>
-              <p className="card-text">To provide all person's personal website and given to learning about web designing and resources.</p>
-              <p className="card-text"><small className="text-muted">View Details...</small></p>
+    const handleReadMore = () => {
+        setIsHiddenVisible(true);
+    };
+    return (
+        <div>
+            <div className="container mt-3 websi1">
+                <div className="jumbotron">
+                    {/* <img src={p3} className="jumboImg" alt="BableshAAzad" /> */}
+                    <h3 className='text-break text-light'>Welcome to BableshAAzad.com</h3>
+                    <p className="lead">This is wonderful place for Website order</p>
+                    {/* <hr className="my-4" /> */}
+                    <p>here, Web Designing and web maintenance both worked taken </p>
+                    <a className="btn btn-success btn-sm shadow" href="https://www.google.com/maps/place/ritesh/@21.2640812,81.6057601,19z/data=!4m6!3m5!1s0x3a28ddb496c9d577:0x5024e9ce26ee67a8!8m2!3d21.2641144!4d81.6055072!16s%2Fg%2F11fl5rsqt_" target="_blank" rel="noreferrer">View On Google Maps</a>
+                </div>
             </div>
-          </div>
-          <div className="card">
-            <img src="../images/p3.jpg" className="card-img-top" alt="BableshAAzad" />
-            <div className="card-body">
-              <h5 className="card-title">Guide for traveling</h5>
-              <p className="card-text">You want to visit in any place of India then want any information of placeses or personal Guide then contact us.</p>
-              <p className="card-text"><small className="text-muted">View Details...</small></p>
-            </div>
-          </div>
-          <div className="card">
-            <img src="../images/p4.jpg" className="card-img-top" alt="BableshAAzad" />
-            <div className="card-body">
-              <h5 className="card-title">Learning</h5>
-              <p className="card-text">If you learn about programing languages or web coding then contact for better knowledge.</p>
-              <p className="card-text"><small className="text-muted">View Details...</small></p>
-            </div>
-          </div>
-        </div>
-      </center>
-
-
-
-
-
-      <section className='section border-top'>
+            <section className='section border-top'>
                 <div className='container'>
                     <div className='row'>
                         <div className='col-md-12 mb-4 text-center'>
@@ -59,35 +39,43 @@ export default function Services() {
                             <div className='underline mx-auto'></div>
                         </div>
 
-                        <div className='col-md-4 mb-2'>
+                        <div className='col-md-4 mb-3'>
                             <div className='card shadow'>
-                                <img src="p1.jpg" className='w-100 border-bottom' alt="Freinds" />
+                                <img src={p6} className='w-100 border-bottom cardImg' alt="Freinds" />
                                 <div className='card-body'>
-                                    <h6>Services 1</h6>
+                                    <h5>Website Designing and maintenance</h5>
                                     <div className='underline mx-auto'></div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+                                    <div>
+                                        <div>{visibleWords}</div>
+                                        {!isHiddenVisible && (
+                                            <button onClick={handleReadMore}>Read More</button>
+                                        )}
+                                        {isHiddenVisible && <div>{hiddenWords}</div>}
+                                    </div>
+
+                                    {/* <Link to="/services" className='btn btn-link'>read more...</Link> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className='col-md-4 mb-3'>
+                            <div className='card shadow'>
+                                <img src={p4} className='w-100 border-bottom cardImg' alt="Freinds" />
+                                <div className='card-body'>
+                                    <h5>Treveling Guid</h5>
+                                    <div className='underline mx-auto'></div>
+                                    <p>All over India tourist places and all states traveling guide.</p>
                                     <Link to="/services" className='btn btn-link'>read more...</Link>
                                 </div>
                             </div>
                         </div>
-                        <div className='col-md-4 mb-2'>
+                        <div className='col-md-4 mb-3'>
                             <div className='card shadow'>
-                                <img src="p4.jpg" className='w-100 border-bottom' alt="Freinds" />
+                                <img src={p5} className='w-100 border-bottom cardImg' alt="Freinds" />
                                 <div className='card-body'>
-                                    <h6>Services 2</h6>
+                                    <h5>Web Designing Learning</h5>
                                     <div className='underline mx-auto'></div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    <Link to="/services" className='btn btn-link'>read more...</Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-md-4 mb-2'>
-                            <div className='card shadow'>
-                                <img src="p5.jpg" className='w-100 border-bottom' alt="Freinds" />
-                                <div className='card-body'>
-                                    <h6>Services 3</h6>
-                                    <div className='underline mx-auto'></div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <p>If you want to learn web designing or want to raw materials then it is wornderful place for you</p>
                                     <Link to="/services" className='btn btn-link'>read more...</Link>
                                 </div>
                             </div>
@@ -98,8 +86,8 @@ export default function Services() {
             </section>
 
 
-   
 
-    </div>
-  )
+
+        </div>
+    )
 }

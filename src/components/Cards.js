@@ -2,6 +2,11 @@ import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
 import {Link} from 'react-router-dom';
+import school from './../images/school.jpg';
+import restaurant from './../images/restaurant.jpg';
+import vloging from './../images/vloging.jpg';
+import social from './../images/social.jpg';
+import tour from './../images/tour.jpg';
 
 function Cards() {
   return (
@@ -11,13 +16,13 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
-              src='images/school.jpg'
+              src={school}
               text='Publice your school or corporate and advertise to anyware'
               label='School'
               path='/services'
             />
             <CardItem
-              src='images/restaurant.jpg'
+              src={restaurant}
               text='Publice your restarent on business to all over world'
               label='Restarent'
               path='/services'
@@ -25,19 +30,19 @@ function Cards() {
           </ul>
           <ul className='cards__items'>
             <CardItem
-              src='images/vloging.jpg'
+              src={vloging}
               text='Vlogging your daily activity and connect more to one plateform'
               label='Vloging'
               path='/services'
             />
             <CardItem
-              src='images/social.jpg'
+              src={social}
               text='Create your social media plateform and connect each other'
               label='Social Media'
               path='/products'
             />
             <CardItem
-              src='images/tour.jpg'
+              src={tour}
               text='For tour and travels, get info to various place'
               label='Tourism'
               path='/sign-up'

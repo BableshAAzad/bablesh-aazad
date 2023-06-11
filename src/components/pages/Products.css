@@ -18,7 +18,7 @@ div.col-8 div {
   border-radius: 20px 50px;
 }
 .sec1{
-  background: url('/public/images/social.jpg');
+  background: url('./../../images/social.jpg');
   background-repeat: no-repeat;
   background-size: 400px;
   width: 100%;

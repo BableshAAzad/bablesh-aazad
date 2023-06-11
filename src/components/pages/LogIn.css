@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Playfair+Display:ital,wght@1,500&family=Poppins:wght@100;500&display=swap");
+.mainPage {
+  background-image: url("./../../images/img-8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(184, 137, 38);
+  font-family: "Montserrat", sans-serif !important;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.inputWraper {
+  width: 300px;
+}
+
+.inputWraper input,
+.inputWraper button {
+  width: 100%;
+  border: 0;
+  box-sizing: border-box;
+  height: 43px;
+}
+
+.inputWraper input {
+  background-color: transparent;
+  box-sizing: border-box;
+  color: #fff;
+  padding-top: 7px;
+  font-size: 15px;
+  padding-right: 10px;
+}
+
+.inputWraper button {
+  margin-top: 25px;
+  background-color: #fff;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  color: #2148c0;
+  font-size: 16px;
+}
+
+.loginLogo img {
+  width: 100px;
+  height: 100px;
+  margin-left: 90px;
+  margin-bottom: 25px;
+  filter: opacity(0.6);
+}
+
+.loginInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.inputWraper input:focus-visible {
+  outline: 0px !important;
+}
+
+.inputWraper .iputInner {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  /* height: 45px; */
+}
+
+.inputWraper .iputInner .userIcon {
+  color: #fff;
+  margin: 0px 10px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.forgotPassword {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: right;
+  margin-top: 11px;
+}
+
+.forgotPassword a{
+  color: #fff;
+  text-decoration: none;
+}

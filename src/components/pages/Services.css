@@ -1,4 +1,16 @@
 .websi1 {
-    font-style: italic;
-    color: #105c8f;
-  }
+  font-style: italic;
+  color: #ffffff;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+}
+.jumbotron {
+  background-image: url("./../../images/img-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cardImg{
+  height: 200px;
+}

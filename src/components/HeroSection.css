@@ -6,7 +6,7 @@
     z-index: -1;
   } */
 
-img {
+.hero-container img {
   object-fit: cover;
   width: 100%;
   height: 75%;

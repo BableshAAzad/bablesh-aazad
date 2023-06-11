@@ -14,6 +14,15 @@
   margin-bottom: 15px;
 }
 
+.loginCSS{
+  text-decoration: none;
+  color: #fff;
+}
+.loginCSS:hover{
+  color: #000000;
+  text-decoration: none;
+}
+
 .navbar-container {
   display: flex;
   justify-content: center;
