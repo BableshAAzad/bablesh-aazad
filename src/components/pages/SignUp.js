@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './LogIn.css';
-import p9 from './../../images/userImage.svg';
+import './SignUp.css';
+import p9 from './../../images/userImage.svg'
 
-export default function LogIn() {
+export default function SignUp() {
   return (
     <>
-      <div className='mainPage'>
+      <div className='mainPageSignUp'>
         <div className="loginInner">
           <form action="" method="post">
             <div className="loginLogo">
@@ -18,7 +18,25 @@ export default function LogIn() {
                 <div className="userIcon">
                   <span className="material-symbols-outlined"> person </span>
                 </div>
+                <input type="text" name="name" id="name" placeholder="FULL NAME" />
+              </div>
+            </div>
+
+            <div className="inputWraper">
+              <div className="iputInner">
+                <div className="userIcon">
+                  <span class="material-symbols-outlined"> account_circle </span>
+                </div>
                 <input type="text" name="username" id="username" placeholder="USERNAME" />
+              </div>
+            </div>
+
+            <div className="inputWraper">
+              <div className="iputInner">
+                <div className="userIcon">
+                  <span className="material-symbols-outlined"> mail </span>
+                </div>
+                <input type="email" name="email" id="email" placeholder="EMAIL" />
               </div>
             </div>
 
@@ -32,12 +50,21 @@ export default function LogIn() {
             </div>
 
             <div className="inputWraper">
-              <button>LOGIN</button>
+              <div className="iputInner">
+                <div className="userIcon">
+                  <span className="material-symbols-outlined"> lock </span>
+                </div>
+                <input type="password" name="confPassword" id="confPassword" placeholder="CONFIRM PASSWORD" />
+              </div>
+            </div>
+
+            <div className="inputWraper">
+              <button>SignUp</button>
             </div>
 
             <div className="row">
               <div className="signUPLink col-6 mt-2">
-                <Link to='/SignUp' className='text-light'>SignUp</Link>
+                <Link to='/logIn' className='text-light'>LOGIN</Link>
               </div>
               <div className="forgotPasswordLink col-6 mt-2">
                 <Link to="/forgetPassword" className='text-light'> Forget password? </Link>

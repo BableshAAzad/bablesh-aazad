@@ -19,13 +19,13 @@ function Cards() {
               src={school}
               text='Publice your school or corporate and advertise to anyware'
               label='School'
-              path='/services'
+              path='/products'
             />
             <CardItem
               src={restaurant}
               text='Publice your restarent on business to all over world'
               label='Restarent'
-              path='/services'
+              path='/products'
             />
           </ul>
           <ul className='cards__items'>
@@ -33,7 +33,7 @@ function Cards() {
               src={vloging}
               text='Vlogging your daily activity and connect more to one plateform'
               label='Vloging'
-              path='/services'
+              path='/products'
             />
             <CardItem
               src={social}
@@ -45,11 +45,11 @@ function Cards() {
               src={tour}
               text='For tour and travels, get info to various place'
               label='Tourism'
-              path='/sign-up'
+              path='/products'
             />
           </ul>
           <br />
-          <center><Link to="/Tempaltes">See more...</Link></center>
+          <center><Link to="/">See more...</Link></center>
         </div>
       </div>
     </div>

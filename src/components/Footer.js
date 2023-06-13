@@ -65,8 +65,8 @@ function Footer() {
         <div className='social-media-wrap'>
           <div className='footer-logo'>
             <Link to='https://bableshaazad.com/' aria-label='BableshAAzad' className='social-logo'>
-            BableshAAzad.com&nbsp;
-            <FontAwesomeIcon icon={faDragon} beat />
+              BableshAAzad.com&nbsp;
+              <FontAwesomeIcon icon={faDragon} beat />
             </Link>
           </div>
           <small className='website-rights'>BableshAAzad © 2023</small>

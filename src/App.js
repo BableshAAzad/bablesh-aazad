@@ -10,7 +10,9 @@ import Projects from './components/Projects';
 import About from './Projects/TextEditor/About';
 import TextForm from './Projects/TextEditor/TextForm';
 import LogIn from './components/pages/LogIn';
-import WordBreak from './components/WordBreak';
+import Cards from './components/Cards';
+import SignUp from './components/pages/SignUp';
+import ForgetPassword from './components/pages/ForgetPassword';
 
 
 function App() {
@@ -26,7 +28,9 @@ function App() {
           <Route exact path='/about' element={<About />}></Route>
           <Route exact path='/textForm' element={<TextForm/>}></Route>
           <Route exact path='/logIn' element={<LogIn></LogIn>}></Route>
-          <Route exact path='/wordBreak' element={<WordBreak></WordBreak>}></Route>
+          <Route exact path='/signUp' element={<SignUp></SignUp>}></Route>
+          <Route exact path='/forgetPassword' element={<ForgetPassword></ForgetPassword>}></Route>
+          <Route exact path='/Cards' element={<Cards></Cards>}></Route>
           <Route exact path='*' element={<Error />}></Route>
         </Routes>
       </Router>

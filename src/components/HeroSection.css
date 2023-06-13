@@ -13,6 +13,23 @@
   position: absolute;
   z-index: -1;
 }
+.btnTamplate{
+  font-size: 19px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 6px;
+}
+.btnTamplate:hover{
+  border-radius: 20px 50px;
+}
+.btnOrder{
+  font-size: 18px;
+  border: 1px solid #fff;
+  margin: 6px;
+}
+.btnOrder:hover{
+  border-radius: 20px 50px;
+}
 .hero-container {
   /* background: url('/public/images/img-home.jpg') center center/cover no-repeat; */
   height: 75vh;

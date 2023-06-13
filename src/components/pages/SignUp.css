@@ -1,10 +1,10 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Playfair+Display:ital,wght@1,500&family=Poppins:wght@100;500&display=swap"); */
-.mainPage {
-  background-image: url("./../../images/img-8.jpg");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Playfair+Display:ital,wght@1,500&family=Poppins:wght@100;500&display=swap");
+.mainPageSignUp {
+  background-image: url("./../../images/img-7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(184, 137, 38);
-  /* font-family: "Montserrat", sans-serif !important; */
+  font-family: "Montserrat", sans-serif !important;
 }
 
 ::placeholder {
@@ -66,7 +66,6 @@
   margin-bottom: 20px;
   border: 1px solid #fff;
   border-radius: 4px;
-  /* height: 45px; */
 }
 
 .inputWraper .iputInner .userIcon {
@@ -81,16 +80,11 @@
 .forgotPassword {
   font-weight: 500;
   font-size: 16px;
+  text-align: right;
   margin-top: 11px;
 }
 
-.forgotPasswordLink Link{
-  text-align: right;
-  color: #fff;
-  text-decoration: none;
-}
-.signUPLink Link{
-  text-align: left;
+.forgotPassword a{
   color: #fff;
   text-decoration: none;
 }

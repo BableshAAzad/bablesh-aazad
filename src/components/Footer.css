@@ -85,6 +85,7 @@
   color: #8490fd;
   transition: 0.3s ease-out;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .footer-email-form h2 {
@@ -102,6 +103,8 @@
 }
 .social-icon-link:hover {
   color: #54d5fc;
+  font-size: 30px;
+  transition: 0.3s ease-out;
 }
 
 .social-media {
@@ -140,6 +143,10 @@
 .website-rights {
   color: #fff;
   margin-bottom: 16px;
+}
+.social-logo:hover {
+  text-decoration: none;
+  color: #8addf7;
 }
 
 @media screen and (max-width: 820px) {
