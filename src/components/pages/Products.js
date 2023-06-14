@@ -1,48 +1,49 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../../App.css';
 import './Products.css';
 
 
-export default function Products() {
+export default function Products(props) {
 
   return (
     <>
       {/* <h1 className='products'>PRODUCTS</h1> */}
-      <div>
-        <h3>Templates: </h3>
+      <div className='container'>
+        <h3>{props.heading}</h3>
         <p>Choose to template and given your order for fully functionly website, make and grow with online your bussiness
           and expand to world </p>
 
         <div className='didd' data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 
-          <div className="container-fluid">
+          <div className="container">
             <div className="row">
               <nav className="col-sm-2 col-4" id="myScrollspy">
                 <ul className="nav nav-pills flex-column">
                   <li className="nav-item">
-                    <a className="nav-link sect" href="#section1">School</a>
+                    <Link className="nav-link sect" to="#section1">School</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link sect" href="#section2">Restaurent</a>
+                    <Link className="nav-link sect" to="#section2">Restaurent</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link sect" href="#section3">Vloging</a>
+                    <Link className="nav-link sect" to="#section3">Vloging</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link sect" href="#section4">Social Media</a>
+                    <Link className="nav-link sect" to="#section4">Social Media</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link sect" href="#section5">Tourism</a>
+                    <Link className="nav-link sect" to="#section5">Tourism</Link>
                   </li>
                   <li className="nav-item dropdown">
-                    <a className="nav-link sect dropdown-toggle" data-toggle="dropdown" href="/">Projects</a>
+                    <Link className="nav-link sect dropdown-toggle" data-toggle="dropdown" to="/">Projects</Link>
                     <div className="dropdown-menu">
-                      <a className="dropdown-item" href="#section41">Research</a>
-                      <a className="dropdown-item" href="#section42">Daily Plans Document </a>
+                      <Link className="dropdown-item" to="#section41">Research</Link>
+                      <Link className="dropdown-item" to="#section42">Daily Plans Document </Link>
                     </div>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link sect" href="#section6">More....</a>
+                    <Link className="nav-link sect" to="#section6">More....</Link>
                   </li>
                 </ul>
               </nav>

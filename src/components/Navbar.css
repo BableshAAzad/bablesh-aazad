@@ -14,13 +14,20 @@
   margin-bottom: 15px;
 }
 
-.loginCSS{
+.loginCSS {
   text-decoration: none;
   color: #fff;
+  border: 1px solid #fff;
+  padding: 5px;
+  margin-bottom: 15px;
+  padding-right: 7px;
 }
-.loginCSS:hover{
+.loginCSS:hover {
   color: #000000;
   text-decoration: none;
+  border-radius: 20px 50px;
+  background-color: #fff;
+  transition: all 0.4s ease-out
 }
 
 .navbar-container {
@@ -43,10 +50,10 @@
   line-height: 1.2;
   margin-bottom: 13px;
 }
-.navbar-logo:hover{
+.navbar-logo:hover {
   color: white;
   text-decoration: none;
-} 
+}
 
 .nav-menu {
   display: grid;
@@ -93,8 +100,25 @@
 .menu-icon {
   display: none;
 }
+@media only screen and (max-width: 5000px) {
+  .navbar-container {
+    max-width: 5000px;
+}
+}
 
-@media screen and (max-width: 960px) {
+@media only screen and (max-width: 2000px) {
+  .navbar-container {
+    max-width: 2000px;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav-menu {
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
   }
@@ -112,7 +136,11 @@
   }
 
   .nav-menu.active {
-    background: linear-gradient(90deg, rgb(18, 19, 22)  0%, rgb(57, 106, 241) 100%);
+    background: linear-gradient(
+      90deg,
+      rgb(18, 19, 22) 0%,
+      rgb(57, 106, 241) 100%
+    );
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -153,7 +181,7 @@
     display: block;
     position: absolute;
     /* top: 0; */
-    margin-bottom: 52PX;
+    margin-bottom: 52px;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.5rem;
@@ -191,5 +219,89 @@
     transition: 250ms;
     border-radius: 10px 50px;
     text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 386px) {
+  .navbar-logo{
+    transform: translate(16%, 50%);
+  }
+}
+
+@media only screen and (max-width: 367px) {
+  .nav-links-mobile{
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .navbar-logo{
+    transform: translate(12%, 50%);
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .navbar-logo{
+    transform: translate(10%, 50%);
+  }
+}
+@media only screen and (max-width: 346px) {
+  .nav-links-mobile{
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .navbar-logo{
+    transform: translate(8%, 50%);
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .navbar-logo{
+    transform: translate(6%, 70%);
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 327px) {
+  .nav-links-mobile{
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navbar-logo{
+    transform: translate(4%, 80%);
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .navbar-logo{
+    transform: translate(2%, 85%);
+    margin-left: 10px;
+  }
+  .nav-links-mobile{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .navbar-logo{
+    transform: translate(0%, 80%);
+  }
+}
+
+@media only screen and (max-width: 295px) {
+  .nav-links-mobile{
+    width: 100%;
+    font-size: 18px;
+  }
+  .nav-links{
+    font-size: 18px;
+  }
+  .navbar-logo{
+    font-size: 20px;
   }
 }

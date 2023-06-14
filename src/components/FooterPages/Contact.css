@@ -1,0 +1,70 @@
+.formCol {
+  background-color: #e7e9eb;
+}
+
+.support a {
+  color: #2b00e9;
+  text-decoration: none;
+  line-height: 2.5rem;
+}
+
+.sharad {
+  font-size: 30px;
+}
+.sharad:hover{
+  font-size: 37px;
+}
+
+.boss {
+    text-decoration: none;
+  }
+
+  .faceb {
+    background-color: #4a61e481;
+    border-radius: 15px 50px;
+  }
+  .faceb:hover {
+    border-radius: 50px 50px;
+  }
+
+  .twit {
+    background-color: #54bbf781;
+    border-radius: 15px 50px;
+  }
+  .twit:hover {
+    border-radius: 50px 50px;
+  }
+
+  .inst {
+    background-color: #ee78daf3;
+    border-radius: 15px 50px;
+  }
+  .inst:hover {
+    border-radius: 50px 50px;
+  }
+
+  .yout {
+    background-color: #f37373f3;
+    border-radius: 15px 50px;
+    color: white;
+  }
+  .yout:hover {
+    border-radius: 50px 50px;
+  }
+
+  .linke {
+    background-color: #370ecef3;
+    border-radius: 15px 50px;
+    color: white;
+  }
+  .linke:hover {
+    border-radius: 50px 50px;
+  }
+
+  .gogl {
+    background-color: #77e780f3;
+    border-radius: 15px 50px;
+  }
+  .gogl:hover {
+    border-radius: 50px 50px;
+  }

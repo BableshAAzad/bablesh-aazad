@@ -1,17 +1,17 @@
 import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import school from './../images/school.jpg';
 import restaurant from './../images/restaurant.jpg';
 import vloging from './../images/vloging.jpg';
 import social from './../images/social.jpg';
 import tour from './../images/tour.jpg';
 
-function Cards() {
+function Cards(props) {
   return (
     <div className='cards'>
-      <h1>Check out these EPIC Templates!</h1>
+      <h1 className='text-success'>{props.heading}</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
@@ -49,7 +49,20 @@ function Cards() {
             />
           </ul>
           <br />
-          <center><Link to="/">See more...</Link></center>
+          {/* <center><Link to="/">See more...</Link></center> */}
+          <nav aria-label="Page navigation example">
+            <ul className="pagination justify-content-center">
+              <li className="page-item disabled">
+                <Link className="page-link">Previous</Link>
+              </li>
+              <li className="page-item active"><Link className="page-link" to="/">1</Link></li>
+              <li className="page-item"><Link className="page-link" to="/">2</Link></li>
+              <li className="page-item"><Link className="page-link" to="/">3</Link></li>
+              <li className="page-item">
+                <Link className="page-link" to="/">Next</Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>

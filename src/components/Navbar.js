@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Button } from './Button';
+// import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -90,9 +90,9 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>
+          {button && (
             <Link to='/logIn' className='loginCSS' >
-              <i className="fa fa-fw fa-user"></i>&nbsp;SignIn</Link></Button>}
+              <i className="fa fa-fw fa-user"></i>&nbsp;SignIn</Link>)}
         </div>
       </nav>
     </>

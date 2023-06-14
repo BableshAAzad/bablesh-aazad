@@ -1,8 +1,12 @@
 .textAbout{
     border-radius: 50px 10px;
 }
+.textAbout:hover{
+    border-radius: 50px 50px;
+}
 .textAboutLink:hover{
     color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 .textAboutLink{
     color: white;

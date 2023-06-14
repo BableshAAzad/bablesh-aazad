@@ -38,10 +38,10 @@ function Footer() {
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link className='linka' to='/'>Contact</Link>
-            <Link className='linka' to='/'>Support</Link>
-            <Link className='linka' to='/'>Destinations</Link>
-            <Link className='linka' to='/'>Sponsorships</Link>
+            <Link className='linka' to='/contact'>Contact</Link>
+            <Link className='linka' to='/contact'>Support</Link>
+            <Link className='linka' to='/contact'>Destinations</Link>
+            <Link className='linka' to='/contact'>Sponsorships</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
@@ -72,7 +72,7 @@ function Footer() {
           <small className='website-rights'>BableshAAzad © 2023</small>
           <div className='social-icons'>
             <Link
-              className='social-icon-link facebook'
+              className='social-icon-link facebook text-warning'
               to='https://www.facebook.com/aazadbablesh/'
               target='_blank'
               aria-label='Facebook'
@@ -88,7 +88,7 @@ function Footer() {
               <i className='fab fa-instagram' />
             </Link>
             <Link
-              className='social-icon-link youtube'
+              className='social-icon-link youtube text-danger'
               to='https://www.youtube.com/channel/UCi1r-Lw0qoggZO0ri-7GyTQ'
               target='_blank'
               aria-label='Youtube'
@@ -96,7 +96,7 @@ function Footer() {
               <i className='fab fa-youtube' />
             </Link>
             <Link
-              className='social-icon-link twitter'
+              className='social-icon-link twitter text-info'
               to='https://twitter.com/bableshaazad'
               target='_blank'
               aria-label='Twitter'

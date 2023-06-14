@@ -67,7 +67,7 @@ export default function SignUp() {
                 <Link to='/logIn' className='text-light'>LOGIN</Link>
               </div>
               <div className="forgotPasswordLink col-6 mt-2">
-                <Link to="/forgetPassword" className='text-light'> Forget password? </Link>
+                <Link to="/forgetPassword" className='text-light'> Forgot password? </Link>
               </div>
             </div>
           </form>

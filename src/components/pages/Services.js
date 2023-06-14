@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './Services.css';
+import {Link} from 'react-router-dom';
 import p4 from './../../images/p4.jpg';
 import p5 from './../../images/p5.jpg';
 import p6 from './../../images/p6.jpg';
 
-export default function Services() {
+export default function Services(props) {
     const [isExpanded1, setIsExpanded1] = useState(false);
     const [isExpanded2, setIsExpanded2] = useState(false);
     const [isExpanded3, setIsExpanded3] = useState(false);
@@ -17,11 +18,11 @@ export default function Services() {
                     <p className="lead">This is wonderful place for Website order</p>
                     {/* <hr className="my-4" /> */}
                     <p>here, Web Designing and web maintenance both worked taken </p>
-                    <a className="btn btn-success btn-sm shadow" href="https://www.google.com/maps/place/ritesh/@21.2640812,81.6057601,19z/data=!4m6!3m5!1s0x3a28ddb496c9d577:0x5024e9ce26ee67a8!8m2!3d21.2641144!4d81.6055072!16s%2Fg%2F11fl5rsqt_" target="_blank" rel="noreferrer">View On Google Maps</a>
+                    <Link className="btn btn-success btn-sm shadow" to="https://www.google.com/maps/place/ritesh/@21.2640812,81.6057601,19z/data=!4m6!3m5!1s0x3a28ddb496c9d577:0x5024e9ce26ee67a8!8m2!3d21.2641144!4d81.6055072!16s%2Fg%2F11fl5rsqt_" target="_blank" rel="noreferrer">View On Google Maps</Link>
                 </div>
             </div>
             <div className="container">
-                <h4 className='mb-2'>There 3 Type of services providing</h4>
+                <h4 className='mb-2'>{props.heading}</h4>
             </div>
             <section className="section border-bottom">
                 <div className="container">
