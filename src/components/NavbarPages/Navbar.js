@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 // import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDragon, faHouse, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
@@ -43,56 +43,69 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container' ref={manuRef}>
-          <Link to='https://bableshaazad.com/' aria-label='BableshAAzad' className='navbar-logo' onClick={closeMobileMenu}>
+          <NavLink to='https://bableshaazad.com/' aria-label='BableshAAzad' className='navbar-logo' onClick={closeMobileMenu}>
             BableshAAzad.com&nbsp;
             <FontAwesomeIcon icon={faDragon} beat />
-          </Link>
+          </NavLink>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              <NavLink to='/' className='nav-links' style={({isActive})=>{
+                return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
+              }} onClick={closeMobileMenu}>
                 <FontAwesomeIcon icon={faHouse} />
                 &nbsp;Home
-              </Link>
+              </NavLink>
             </li>
             <li className='nav-item'>
-              <Link
+              <NavLink
                 to='/services'
                 className='nav-links'
+                style={({isActive})=>{
+                  return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
+                }}
                 onClick={closeMobileMenu}
               >
                 <i className="fa fa-fw fa-wrench" />
                 &nbsp;Services
-              </Link>
+              </NavLink>
             </li>
 
             <li className='nav-item'>
-              <Link
+              <NavLink
                 to='/products'
                 className='nav-links'
+                style={({isActive})=>{
+                  return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
+                }}
                 onClick={closeMobileMenu}
               >
                 <FontAwesomeIcon icon={faShoppingCart} />
                 &nbsp;Products
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link
+              <NavLink
                 to='/logIn'
                 className='nav-links-mobile'
+                style={({isActive})=>{
+                  return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
+                }}
                 onClick={closeMobileMenu}
               >
                 <i className="fa fa-fw fa-user"></i>
                 &nbsp;SignIn
-              </Link>
+              </NavLink>
             </li>
           </ul>
           {button && (
-            <Link to='/logIn' className='loginCSS' >
-              <i className="fa fa-fw fa-user"></i>&nbsp;SignIn</Link>)}
+            <NavLink to='/logIn' className='loginCSS' style={({isActive})=>{
+              return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
+            }}>
+              <i className="fa fa-fw fa-user"></i>&nbsp;SignIn</NavLink>)}
         </div>
       </nav>
     </>

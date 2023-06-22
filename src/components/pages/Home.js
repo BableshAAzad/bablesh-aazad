@@ -1,9 +1,8 @@
-import React from 'react';
 import '../../App.css';
-import Cards from '../Cards';
-import HeroSection from '../HeroSection';
+import Cards from './../NavbarPages/Cards';
+import HeroSection from './../NavbarPages/HeroSection';
 import { Link } from 'react-router-dom';
-import BableshAAzad from '../BableshAAzad';
+import BableshAAzad from './../NavbarPages/BableshAAzad';
 
 function Home(props) {
   return (

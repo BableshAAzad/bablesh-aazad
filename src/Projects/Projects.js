@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Projects.css';
 import { Link } from 'react-router-dom';
-import TextForm from '../Projects/TextEditor/TextForm';
-import Alert from '../Projects/TextEditor/Alert';
+import TextForm from './TextEditor/TextForm';
+import Alert from './TextEditor/Alert';
 
 export default function Projects(props) {
     const [mode] = useState('light'); //whether dark mode is enabled or not

@@ -1,16 +1,15 @@
-import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
 import { Link } from 'react-router-dom';
-import school from './../images/school.jpg';
-import restaurant from './../images/restaurant.jpg';
-import vloging from './../images/vloging.jpg';
-import social from './../images/social.jpg';
-import tour from './../images/tour.jpg';
+import school from './../../images/school.jpg';
+import restaurant from './../../images/restaurant.jpg';
+import vloging from './../../images/vloging.jpg';
+import social from './../../images/social.jpg';
+import tour from './../../images/tour.jpg';
 
 function Cards(props) {
   return (
-    <div className='cards'>
+    <div className='cards cardsDiv'>
       <h1 className='text-success'>{props.heading}</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>

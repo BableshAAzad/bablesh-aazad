@@ -1,8 +1,7 @@
-import React from 'react';
-import '../App.css';
+import './../../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
-import p9 from './../images/p9.jpg';
+import p9 from './../../images/p9.jpg';
 import { Link } from 'react-router-dom';
 
 function HeroSection(props) {
