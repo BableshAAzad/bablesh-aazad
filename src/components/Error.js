@@ -18,7 +18,7 @@ function Error() {
             <div style={lalitt}>
                 <h2 style={lalit}> Sorry :( 404 page not found</h2>
                 <br /><br />
-                <Link to="/">Go to Home page.....</Link>
+                <Link to="/">Go to Home page......</Link>
             </div>
         </>
     )
