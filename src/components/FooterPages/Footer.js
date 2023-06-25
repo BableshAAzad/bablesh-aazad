@@ -47,7 +47,7 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>Videos</h2>
-            <Link className='linka' to='/'>Submit Video</Link>
+            <Link className='linka' to='/videoUpload'>Submit Video</Link>
             <Link className='linka' to='/'>Ambassadors</Link>
             <Link className='linka' to='/'>Agency</Link>
             <Link className='linka' to='/'>Influencer</Link>
