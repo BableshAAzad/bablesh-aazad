@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './../src/components/NavbarPages/Navbar';
 import './App.css';
 import Home from './../src/components/pages/Home';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Services from './../src/components/pages/Services';
 import Products from './../src/components/pages/Products';
 import Error from './components/Error';
@@ -19,6 +19,7 @@ import BableshAAzad from './../src/components/NavbarPages/BableshAAzad';
 import Contact from './components/FooterPages/Contact';
 import HeroSection from './../src/components/NavbarPages/HeroSection';
 import VideoUpload from './components/FooterPages/Video/VideoUpload';
+import Dashboard from './components/LoginPages/Dashboard';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,7 +31,11 @@ function ScrollToTop() {
   return null;
 }
 
-function App() {
+function App(props) {
+  let isLogged = false;
+  let data = {
+      "st" : "User not loged In"
+  }
   return (
     <>
       <Router>
@@ -44,6 +49,7 @@ function App() {
           <Route exact path='/about' element={<About />}></Route>
           <Route exact path='/textForm' element={<TextForm />}></Route>
           <Route exact path='/logIn' element={<LogIn heading='Login'></LogIn>}></Route>
+          <Route path="/dashboard" element={isLogged ? <Dashboard/> : <Navigate to="/logIn" replace state={data} />}></Route>
           <Route exact path='/signUp' element={<SignUp heading='SignUp'></SignUp>}></Route>
           <Route exact path='/forgetPassword' element={<ForgetPassword heading='Forget Password'></ForgetPassword>}></Route>
           <Route exact path='/cards' element={<Cards></Cards>}></Route>

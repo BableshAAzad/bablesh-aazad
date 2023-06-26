@@ -1,14 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './LogIn.css';
 import p9 from './../../images/userImage.svg';
 
-export default function LogIn() {
+export default function LogIn(props) {
+  let location = useLocation();
+  const st = location.state && location.state.st;
   return (
     <>
       <div className='mainPage'>
         <div className="loginInner">
           <form action="" method="post">
+            <h4 style={{ textAlign: 'center', marginTop: '50px' }}>{st}</h4>
             <div className="loginLogo">
               <img src={p9} alt="Login" />
             </div>
