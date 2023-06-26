@@ -20,6 +20,7 @@ import Contact from './components/FooterPages/Contact';
 import HeroSection from './../src/components/NavbarPages/HeroSection';
 import VideoUpload from './components/FooterPages/Video/VideoUpload';
 import Dashboard from './components/LoginPages/Dashboard';
+import YoutubeData from './components/FooterPages/Video/YoutubeData';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -59,6 +60,7 @@ function App(props) {
           <Route exact path='/heroSection' element={<HeroSection></HeroSection>}></Route>
           <Route exact path='/videoUpload' element={<VideoUpload></VideoUpload>}></Route>
           <Route exact path='*' element={<Error />}></Route>
+          <Route exact path='/youtubeData' element={<YoutubeData></YoutubeData>}></Route>
         </Routes>
         <Footer />
       </Router>
