@@ -1,4 +1,11 @@
 import React from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Icon from '@mui/icons-material';
+
 
 export default function About(props) {
   // let myStyle = {
@@ -53,51 +60,48 @@ export default function About(props) {
 
       </div> */}
 
-      <div className="accordion" id="accordionExample">
-        <div className="card">
-          <div className="card-header" id="headingOne">
-            <h2 className="mb-0">
-              <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Collapsible Group Item #1
-              </button>
-            </h2>
-          </div>
+<div>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Accordion 1</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography>Accordion 2</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion disabled>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3a-content"
+          id="panel3a-header"
+        >
+          <Typography>Disabled Accordion</Typography>
+        </AccordionSummary>
+      </Accordion>
+    </div>
 
-          <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div className="card-body">
-              Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
-            </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-header" id="headingTwo">
-            <h2 className="mb-0">
-              <button className="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Collapsible Group Item #2
-              </button>
-            </h2>
-          </div>
-          <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-            <div className="card-body">
-              Some placeholder content for the second accordion panel. This panel is hidden by default.
-            </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-header" id="headingThree">
-            <h2 className="mb-0">
-              <button className="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Collapsible Group Item #3
-              </button>
-            </h2>
-          </div>
-          <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-            <div className="card-body">
-              And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
-            </div>
-          </div>
-        </div>
-      </div>
 
       <br /><br />
       <h4 style={{ color: '#23B1CD' }}>Description of functionality</h4>
@@ -109,7 +113,7 @@ export default function About(props) {
           <dt>2. Convert to Lowercase</dt>
           <dd className='mx-4'>- Click on this button then auto conver all characters in lowercase</dd>
           <dt>3. Clear Text</dt>
-          <dd className='mx-4'>- It is clear all text to fill you.</dd>
+          <dd className='mx-4'>- It is clear all text to fill you...</dd>
           <dt>4. Copy Text</dt>
           <dd className='mx-4'>- Without select all text, just click this button then auto copied to all your filled text.</dd>
           <dt>5. Remove Extra spaces</dt>
