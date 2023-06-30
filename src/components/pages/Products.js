@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../../App.css';
 import './Products.css';
+import Cards from './../NavbarPages/Cards';
 
 
 export default function Products(props) {
@@ -9,7 +10,8 @@ export default function Products(props) {
   return (
     <>
       {/* <h1 className='products'>PRODUCTS</h1> */}
-      <div className='container'>
+      <Cards heading='Check out these EPIC Templates!'/>
+      <div className='container' style={{marginBottom: '10px'}}>
         <h3>{props.heading}</h3>
         <p>Choose to template and given your order for fully functionly website, make and grow with online your bussiness
           and expand to world </p>

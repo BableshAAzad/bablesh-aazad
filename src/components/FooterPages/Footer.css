@@ -72,7 +72,8 @@
 }
 
 .footer-link-items > h2 {
-  color: #fff;
+  color: #9ddaec;
+  font-size: 170%;
 }
 
 .linka {
@@ -105,6 +106,9 @@
   color: #54d5fc;
   font-size: 30px;
   transition: 0.3s ease-out;
+}
+.linkedin{
+  color: #5968f3;
 }
 
 .social-media {
