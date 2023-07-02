@@ -1,11 +1,10 @@
 import './Cards.css';
-import CardItem from './CardItem';
-import { Link } from 'react-router-dom';
-import school from './../../images/school.jpg';
-import restaurant from './../../images/restaurant.jpg';
-import vloging from './../../images/vloging.jpg';
-import social from './../../images/social.jpg';
-import tour from './../../images/tour.jpg';
+import CardItem from '../ProductsPages/CardItem';
+import school from './../../../images/school.jpg';
+import restaurant from './../../../images/restaurant.jpg';
+import vloging from './../../../images/vloging.jpg';
+import social from './../../../images/social.jpg';
+import tour from './../../../images/tour.jpg';
 
 function Cards(props) {
   return (
@@ -48,19 +47,7 @@ function Cards(props) {
             />
           </ul>
           <br />
-          <nav aria-label="Page navigation example">
-            <ul className="pagination justify-content-center">
-              <li className="page-item disabled">
-                <Link className="page-link">Previous</Link>
-              </li>
-              <li className="page-item active"><Link className="page-link" to="/">1</Link></li>
-              <li className="page-item"><Link className="page-link" to="/">2</Link></li>
-              <li className="page-item"><Link className="page-link" to="/">3</Link></li>
-              <li className="page-item">
-                <Link className="page-link" to="/">Next</Link>
-              </li>
-            </ul>
-          </nav>
+        
         </div>
       </div>
     </div>

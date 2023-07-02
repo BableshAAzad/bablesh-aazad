@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDragon, faHouse, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faDragon, faHouse, faShoppingCart, faWrench, faUser } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -55,7 +55,7 @@ function Navbar() {
               <NavLink to='/' className='nav-links' style={({isActive})=>{
                 return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
               }} onClick={closeMobileMenu}>
-                <FontAwesomeIcon icon={faHouse} />
+                <FontAwesomeIcon icon={faHouse} fade />
                 &nbsp;Home
               </NavLink>
             </li>
@@ -68,7 +68,7 @@ function Navbar() {
                 }}
                 onClick={closeMobileMenu}
               >
-                <i className="fa fa-fw fa-wrench" />
+                <FontAwesomeIcon icon={faWrench} shake />
                 &nbsp;Services
               </NavLink>
             </li>
@@ -82,7 +82,7 @@ function Navbar() {
                 }}
                 onClick={closeMobileMenu}
               >
-                <FontAwesomeIcon icon={faShoppingCart} />
+                <FontAwesomeIcon icon={faShoppingCart} bounce />
                 &nbsp;Products
               </NavLink>
             </li>
@@ -96,7 +96,7 @@ function Navbar() {
                 }}
                 onClick={closeMobileMenu}
               >
-                <i className="fa fa-fw fa-user"></i>
+                <FontAwesomeIcon icon={faUser} flip />
                 &nbsp;SignIn
               </NavLink>
             </li>
@@ -105,7 +105,7 @@ function Navbar() {
             <NavLink to='/logIn' className='loginCSS' style={({isActive})=>{
               return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
             }}>
-              <i className="fa fa-fw fa-user"></i>&nbsp;SignIn</NavLink>)}
+              <FontAwesomeIcon icon={faUser} flip />&nbsp;SignIn</NavLink>)}
         </div>
       </nav>
     </>

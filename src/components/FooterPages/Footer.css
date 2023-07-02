@@ -7,10 +7,6 @@
   align-items: center;
 }
 
-.footer-links .footer-link-wrapper .footer-link-items a .active{
-  background-color: aqua;
-}
-
 .footer-subscription {
   display: flex;
   flex-direction: column;
@@ -69,6 +65,12 @@
   text-align: left;
   width: 160px;
   box-sizing: border-box;
+}
+
+.footer-link-items .active{
+  background-color: rgb(2, 113, 156);
+  border-radius: 2px 20px;
+  padding: 3px;
 }
 
 .footer-link-items h2 {

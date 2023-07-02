@@ -1,12 +1,13 @@
 import React from "react";
 import "./Footer.css";
-import { Button } from "../NavbarPages/Button";
-import { Link } from "react-router-dom";
+import { Button } from "../NavbarPages/HomePages/Button";
+import {Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDragon } from "@fortawesome/free-solid-svg-icons";
+import { faDragon, faVrCardboard } from "@fortawesome/free-solid-svg-icons";
 
-function Footer(props) {	
-  
+
+function Footer(props) {
+ 
   return (
     <div className="footer-container">
       <section className="footer-subscription">
@@ -32,60 +33,60 @@ function Footer(props) {
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
             <h2>About Us</h2>
-            <Link className="linka" to="/howItWorks">
+            <NavLink className="linka" to="/howItWorks">
               How it works
-            </Link>
-            <Link className="linka" to="/">
+            </NavLink>
+            <NavLink className="linka" to="/careers">
               Careers
-            </Link>
-            <Link className="linka" to="/">
+            </NavLink>
+            <NavLink className="linka" to="/investors">
               Investors
-            </Link>
-            <Link className="linka" to="/">
+            </NavLink>
+            <NavLink className="linka" to="/termsOfServices">
               Terms of Service
-            </Link>
+            </NavLink>
           </div>
           <div className="footer-link-items">
             <h2>Contact Us</h2>
-            <Link className="linka" to="/contact">
+            <NavLink className="linka" to="/contact">
               Contact
-            </Link>
-            <Link className="linka" to="/contact">
+            </NavLink>
+            <NavLink className="linka" to="/support">
               Support
-            </Link>
-            <Link className="linka" to="/contact">
+            </NavLink>
+            <NavLink className="linka" to="/designations">
               Destinations
-            </Link>
-            <Link className="linka" to="/contact">
+            </NavLink>
+            <NavLink className="linka" to="/sponsorships">
               Sponsorships
-            </Link>
+            </NavLink>
           </div>
         </div>
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
             <h2>Videos</h2>
-            <Link className="linka" to="/videoUpload">
+            <NavLink className="linka" to="/videoUpload">
               Submit Video
-            </Link>
-            <Link className="linka" to="/">
+            </NavLink>
+            <NavLink className="linka" to="/smbassadors">
               Ambassadors
-            </Link>
-            <Link className="linka" to="/">
+            </NavLink>
+            <NavLink className="linka" to="/agency">
               Agency
-            </Link>
-            <Link className="linka" to="/">
+            </NavLink>
+            <NavLink className="linka" to="/influencer">
               Influencer
-            </Link>
+            </NavLink>
           </div>
           <div className="footer-link-items">
             <h2>Social Media</h2>
             <Link
               className="linka"
-              to="https://www.instagram.com/bableshaazad/"
+              to="https://discordapp.com/users/1124405821950935132"
               target="_blank"
-              aria-label="Instagram"
+              aria-label="Discord"
             >
-              Instagram
+              Discord &nbsp;<FontAwesomeIcon icon={faVrCardboard} shake />
             </Link>
             <Link
               className="linka"

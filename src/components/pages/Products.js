@@ -1,95 +1,83 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import '../../App.css';
-import './Products.css';
-import Cards from './../NavbarPages/Cards';
 
+import "../../App.css";
+import "./Products.css";
+import Cards from "../NavbarPages/ProductsPages/Cards";
+import Cards2 from "../NavbarPages/ProductsPages/Cards2";
+import React, { useState } from "react";
+import { Box, Pagination, Typography } from "@mui/material";
+
+const OpenPage = (props) => {
+  const { children, page, index } = props;
+  return (
+    <div hidden={page !== index}>
+      {page === index && <Box mt={2}>{children}</Box>}
+    </div>
+  );
+};
 
 export default function Products(props) {
-
+  const [activePage, setActivePage] = useState(1);
   return (
     <>
-      {/* <h1 className='products'>PRODUCTS</h1> */}
-      <Cards heading='Check out these EPIC Templates!'/>
-      <div className='container' style={{marginBottom: '10px'}}>
-        <h3>{props.heading}</h3>
-        <p>Choose to template and given your order for fully functionly website, make and grow with online your bussiness
-          and expand to world </p>
+      <Box>
+        <OpenPage page={activePage} index={1}>
+        <Cards heading="Check out these EPIC Templates!" />
+        </OpenPage>
+        <OpenPage page={activePage} index={2}>
+          <Cards2 heading="Check out these EPIC Templates!" ></Cards2>
+        </OpenPage>
+        <OpenPage page={activePage} index={3}>
+          Page3
+        </OpenPage>
+        <OpenPage page={activePage} index={4}>
+          Page4
+        </OpenPage>
+        <OpenPage page={activePage} index={5}>
+          Page5
+        </OpenPage>
+        <OpenPage page={activePage} index={6}>
+          Page6
+        </OpenPage>
+        <OpenPage page={activePage} index={7}>
+          Page7
+        </OpenPage>
+        <OpenPage page={activePage} index={8}>
+          Page8
+        </OpenPage>
+        <OpenPage page={activePage} index={9}>
+          Page9
+        </OpenPage>
+        <OpenPage page={activePage} index={10}>
+          Page10
+        </OpenPage>
+        <Typography variant="h5" color="secondary" align="center">
+          See to more collections
+        </Typography>
+        <Box mt={2} mb={3} display="flex" justifyContent="center">
+          <Pagination
+            count={10}
+            page={activePage}
+            onChange={(event, newPage) => {
+              setActivePage(newPage);
+            }}
+            size="large"
+            color="secondary"
+            defaultPage={1}
+            siblingCount={1}
+            boundaryCount={0}
+            showFirstButton
+            showLastButton
+            variant="outlined"
+            sx={{
+              "Button.MuiPaginationItem-circular.Mui-selected": {
+                bgcolor: "secondary.main",
+                color: "#ffffff",
+              },
+            }}
+          />
+        </Box>
+      </Box>
 
-        <div className='didd' data-spy="scroll" data-target="#myScrollspy" data-offset="1">
-
-          <div className="container">
-            <div className="row">
-              <nav className="col-sm-2 col-4" id="myScrollspy">
-                <ul className="nav nav-pills flex-column">
-                  <li className="nav-item">
-                    <Link className="nav-link sect" to="#section1">School</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link sect" to="#section2">Restaurent</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link sect" to="#section3">Vloging</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link sect" to="#section4">Social Media</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link sect" to="#section5">Tourism</Link>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <Link className="nav-link sect dropdown-toggle" data-toggle="dropdown" to="/">Projects</Link>
-                    <div className="dropdown-menu">
-                      <Link className="dropdown-item" to="#section41">Research</Link>
-                      <Link className="dropdown-item" to="#section42">Daily Plans Document </Link>
-                    </div>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link sect" to="#section6">More....</Link>
-                  </li>
-                </ul>
-              </nav>
-              <div className="col-sm-10 col-8 dide">
-                <div id="section1">
-                  <h2>Section 1</h2>
-                  <p>Meke your school to online and all documents and daily activity maintain. and also update your daily
-                    active in a single portal.
-                  </p>
-                  <div className="sec1"></div>
-                </div>
-                <div id="section2" className="bg-warning">
-                  <h1>Section 2</h1>
-                  <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-                </div>
-                <div id="section3" className="bg-secondary">
-                  <h1>Section 3</h1>
-                  <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-                </div>
-                <div id="section4" className="bg-info">
-                  <h1>Section 4</h1>
-                  <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-                </div>
-                <div id="section5" className="bg-light">
-                  <h1>Section 5</h1>
-                  <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-                </div>
-                <div id="section41" className="bg-danger">
-                  <h1>Section 4-1</h1>
-                  <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-                </div>
-                <div id="section42" className="bg-info">
-                  <h1>Section 4-2</h1>
-                  <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-
-      </div>
     </>
-
   );
 }

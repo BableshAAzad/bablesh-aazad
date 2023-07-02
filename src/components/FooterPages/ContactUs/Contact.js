@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Contact.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function Contact(props) {
     return (
@@ -67,8 +69,8 @@ export default function Contact(props) {
             <div className="support text-center">
                 <h3 className="text-secondary">Contact Details</h3>
                 <br />
-                <Link to="/" className='boss'><i className="fa fa-phone"></i>&nbsp;+91-7898300815</Link><br />
-                <Link to="mailto:bableshaazad@outlook.com" target="_blank" rel="noopener noreferrer" className='boss'><i className="fa fa-envelope"></i>&nbsp;Bableshaazad@outlook.com</Link><br />
+                <Link to="/" className='boss'><FontAwesomeIcon icon={faPhone} shake />&nbsp;+91-7898300815</Link><br />
+                <Link to="mailto:bableshaazad@outlook.com" target="_blank" rel="noopener noreferrer" className='boss'><FontAwesomeIcon icon={faEnvelope} flip />&nbsp;Bableshaazad@outlook.com</Link><br />
                 <br /><br />
                 <div className="container">
                 <div className='row text-center'>
@@ -104,9 +106,9 @@ export default function Contact(props) {
                     </div>
                     <div className='col-md-2 socialP'>
                         <p className='gogl'>Google</p>
-                        <Link to="https://bableshaazad.com/" target="_blank" rel="noopener noreferrer" className='sharad text-info'><i className="fab fa-google"></i></Link>
+                        <Link to="https://www.google.com/search?rlz=1C1CHBF_enIN1012IN1012&sxsrf=AB5stBhGzBAphyRXusTlnUg2WlkrP3nlLA:1688302885655&q=bableshaazad&nfpr=1&sa=X&ved=2ahUKEwjB2pauivD_AhWISmwGHSLIAdUQvgUoAXoECAoQAg&biw=1366&bih=625&dpr=1" target="_blank" rel="noopener noreferrer" className='sharad text-info'><i className="fab fa-google"></i></Link>
                         <br />
-                        <Link to='https://bableshaazad.com/' target="_blank" rel="noopener noreferrer">Google.com</Link>
+                        <Link to="https://www.google.com/search?rlz=1C1CHBF_enIN1012IN1012&sxsrf=AB5stBhGzBAphyRXusTlnUg2WlkrP3nlLA:1688302885655&q=bableshaazad&nfpr=1&sa=X&ved=2ahUKEwjB2pauivD_AhWISmwGHSLIAdUQvgUoAXoECAoQAg&biw=1366&bih=625&dpr=1" target="_blank" rel="noopener noreferrer">Google.com</Link>
                     </div>
                 </div>
                 </div>

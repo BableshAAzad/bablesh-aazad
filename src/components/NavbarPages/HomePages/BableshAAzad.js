@@ -1,6 +1,6 @@
 import React from 'react';
 import './BableshAAzad.css';
-import bableshpic from './../../images/bob.jpg';
+import bableshpic from './../../../images/bob.jpg';
 
 export default function BableshAAzad(props) {
     return (

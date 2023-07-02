@@ -1,8 +1,8 @@
 import '../../App.css';
-import HeroSection from './../NavbarPages/HeroSection';
+import HeroSection from '../NavbarPages/HomePages/HeroSection';
 import { Link } from 'react-router-dom';
-import BableshAAzad from './../NavbarPages/BableshAAzad';
-import YoutubeData from './../FooterPages/Video/YoutubeData'
+import BableshAAzad from '../NavbarPages/HomePages/BableshAAzad';
+import YoutubeData from '../NavbarPages/HomePages/YoutubeData'
 
 function Home(props) {
   return (
