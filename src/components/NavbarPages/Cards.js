@@ -48,7 +48,6 @@ function Cards(props) {
             />
           </ul>
           <br />
-          {/* <center><Link to="/">See more...</Link></center> */}
           <nav aria-label="Page navigation example">
             <ul className="pagination justify-content-center">
               <li className="page-item disabled">

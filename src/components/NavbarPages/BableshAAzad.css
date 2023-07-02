@@ -1,3 +1,13 @@
 .founderOf{
     margin-left: 70px
 }
+.babFooter{
+text-align: right;
+}
+
+@media screen and (max-width: 500px) {
+    .founderOf{
+        margin-left: 80px
+    }
+
+}

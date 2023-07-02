@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.footer-links .footer-link-wrapper .footer-link-items a .active{
+  background-color: aqua;
+}
+
 .footer-subscription {
   display: flex;
   flex-direction: column;

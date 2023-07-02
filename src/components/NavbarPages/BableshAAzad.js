@@ -19,17 +19,17 @@ export default function BableshAAzad(props) {
 
                                 </div>
                                 <div className='founderOf mb-2'>
-                                    <span >(Founder of BableshAAzad.com)</span>
+                                    <span>(Founder of BableshAAzad.com)</span>
                                 </div>
                                 <div className="d-flex flex-row align-items-center justify-content-center">
-                                    <p className="lead fw-normal mb-0 me-3">"I am a full stack web developer and electronics and communication engineer.
-                                        My dream is provide to all startup and bussiness to
+                                    <p className="lead fw-normal mb-0 me-3">"I am a Full Stack Web Developer and Electronics and Communication Engineer.
+                                        My dream is to all startup and bussiness to
                                         personal and profetional website provide in affortable prices.
                                         I want to make all producst and all of the thing to show in online.
                                         To one single click search and find anything you want."</p>
 
                                 </div>
-                                <footer className="blockquote-footer text-right">From BableshAAzad.com</footer>
+                                <footer className="blockquote-footer babFooter mt-4">From BableshAAzad.com</footer>
                                 <br />
 
                             </div>

@@ -7,6 +7,8 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
 const YoutubeData = () => {
   const [subscriberCount, setSubscriberCount] = useState(0);
@@ -36,7 +38,24 @@ const YoutubeData = () => {
       <div className="container">
         <div className="yutubetirath">
           <div>
-            <h1 style={{color: "red", textAlign: "center"}}>Welecome to my Youtube Channel</h1>
+            <h1 style={{color: "red", textAlign: "center", textShadow: "2px 2px #28FAE7"}}>Welecome to my Youtube Channel</h1>
+           <div className="youtubelink">
+           <Link
+                    to="https://www.youtube.com/channel/UCi1r-Lw0qoggZO0ri-7GyTQ"
+                    target="_blank"
+                    aria-label="Youtube"
+                  >
+                    <Button
+                      variant="contained"
+                      color="error"
+                      size="large"
+                      startIcon={<YouTubeIcon />}
+                       endIcon={<ThumbUpIcon />}
+                    >
+                      Subscribe My Channel
+                    </Button>
+            </Link>
+           </div>
           </div>
           <div className="youtubedatas">
             <Box sx={{ flexGrow: 1, textAlign: "center" }}>
@@ -53,7 +72,7 @@ const YoutubeData = () => {
                       size="large"
                       startIcon={<SubscriptionsIcon />}
                     >
-                      Subscriber Count: {subscriberCount}
+                      Subscriber Count : {subscriberCount}
                     </Button>
                   </Link>
                 </Grid>
@@ -67,9 +86,9 @@ const YoutubeData = () => {
                       variant="contained"
                       color="error"
                       size="large"
-                      endIcon={<YouTubeIcon />}
+                      endIcon={<OndemandVideoIcon />}
                     >
-                      Video Count: {videoCount}
+                      Video Count : {videoCount}
                     </Button>
                   </Link>
                 </Grid>

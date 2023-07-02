@@ -21,6 +21,7 @@ import HeroSection from './../src/components/NavbarPages/HeroSection';
 import VideoUpload from './components/FooterPages/Video/VideoUpload';
 import Dashboard from './components/LoginPages/Dashboard';
 import YoutubeData from './components/FooterPages/Video/YoutubeData';
+import HowItWorks from './components/aboutUs/HowItWorks';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -61,6 +62,9 @@ function App(props) {
           <Route exact path='/videoUpload' element={<VideoUpload></VideoUpload>}></Route>
           <Route exact path='*' element={<Error />}></Route>
           <Route exact path='/youtubeData' element={<YoutubeData></YoutubeData>}></Route>
+
+          {/* About Us Pages */}
+          <Route exact path='/howItWorks' element={<HowItWorks></HowItWorks>}></Route>
         </Routes>
         <Footer />
       </Router>
