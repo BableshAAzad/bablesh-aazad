@@ -4,7 +4,7 @@ import "./HeroSection.css";
 import p9 from "./../../../images/p9.jpg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHandPointRight, faHandPointLeft } from '@fortawesome/free-solid-svg-icons';
+import {faHandPointLeft } from '@fortawesome/free-solid-svg-icons';
 
 function HeroSection(props) {
   return (
@@ -24,7 +24,7 @@ function HeroSection(props) {
           buttonSize='btn--large'
           to='mailto:bableshaazad@outlook.com'
         >
-         <FontAwesomeIcon icon={faHandPointRight} fade /> ORDER NOW <FontAwesomeIcon icon={faHandPointLeft} fade />
+          ORDER NOW <FontAwesomeIcon icon={faHandPointLeft} fade />
         </Button>
       </div>
     </div>
