@@ -3,7 +3,7 @@ import "./Footer.css";
 import { Button } from "../NavbarPages/HomePages/Button";
 import {Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDragon, faVrCardboard } from "@fortawesome/free-solid-svg-icons";
+import { faDragon, faVrCardboard, faMessage } from "@fortawesome/free-solid-svg-icons";
 
 
 function Footer(props) {
@@ -90,11 +90,11 @@ function Footer(props) {
             </Link>
             <Link
               className="linka"
-              to="https://www.facebook.com/aazadbablesh/"
+              to="https://www.snapchat.com/add/bableshaazad?share_id=Xj088v38Ars&locale=en-US"
               target="_blank"
-              aria-label="Facebook"
+              aria-label="Snapchat"
             >
-              Facebook
+              Snapchat &nbsp;<FontAwesomeIcon icon={faMessage} bounce />
             </Link>
             <Link
               className="linka"
