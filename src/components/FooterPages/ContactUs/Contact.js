@@ -69,8 +69,8 @@ export default function Contact(props) {
             <div className="support text-center">
                 <h3 className="text-secondary">Contact Details</h3>
                 <br />
-                <Link to="/" className='boss'><FontAwesomeIcon icon={faPhone} shake />&nbsp;+91-7898300815</Link><br />
-                <Link to="mailto:bableshaazad@outlook.com" target="_blank" rel="noopener noreferrer" className='boss'><FontAwesomeIcon icon={faEnvelope} flip />&nbsp;Bableshaazad@outlook.com</Link><br />
+                <Link to="tel:+917898300815" className='boss'><FontAwesomeIcon icon={faPhone} shake />&nbsp;+91-7898300815</Link><br />
+                <Link to="mailto:bableshaazad@outlook.com" className='boss'><FontAwesomeIcon icon={faEnvelope} flip />&nbsp;Bableshaazad@outlook.com</Link><br />
                 <br /><br />
                 <div className="container">
                 <div className='row text-center'>
