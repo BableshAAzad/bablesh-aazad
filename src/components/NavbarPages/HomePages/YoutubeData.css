@@ -18,7 +18,7 @@
   margin-top: 40px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
     .yutubetirath {
         background-image: url("./../../../images/siddha.jpg");
         background-repeat: no-repeat;
