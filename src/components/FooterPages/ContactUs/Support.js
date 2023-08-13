@@ -45,10 +45,10 @@ const Support = () => {
                         <Link to='https://www.linkedin.com/in/bableshaazad/' target="_blank" rel="noopener noreferrer">Linkedin</Link>
                     </div>
                     <div className='col-md-2 socialP'>
-                        <p className='gogl'>Google</p>
-                        <Link to="https://www.google.com/search?rlz=1C1CHBF_enIN1012IN1012&sxsrf=AB5stBhGzBAphyRXusTlnUg2WlkrP3nlLA:1688302885655&q=bableshaazad&nfpr=1&sa=X&ved=2ahUKEwjB2pauivD_AhWISmwGHSLIAdUQvgUoAXoECAoQAg&biw=1366&bih=625&dpr=1" target="_blank" rel="noopener noreferrer" className='sharad text-info'><i className="fab fa-google"></i></Link>
+                        <p className='github'>GitHub</p>
+                        <Link className="social-icon-link text-dark fhub githubi"to="https://github.com/bableshaazad"target="_blank"aria-label="GitHub" rel="noopener noreferrer"><i className="fab fa-github" /></Link>
                         <br />
-                        <Link to="https://www.google.com/search?rlz=1C1CHBF_enIN1012IN1012&sxsrf=AB5stBhGzBAphyRXusTlnUg2WlkrP3nlLA:1688302885655&q=bableshaazad&nfpr=1&sa=X&ved=2ahUKEwjB2pauivD_AhWISmwGHSLIAdUQvgUoAXoECAoQAg&biw=1366&bih=625&dpr=1" target="_blank" rel="noopener noreferrer">Google.com</Link>
+                        <Link className="githubi"to="https://github.com/bableshaazad"target="_blank"aria-label="GitHub" rel="noopener noreferrer">GitHub</Link>
                     </div>
                 </div>
                 </div>
