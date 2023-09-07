@@ -28,7 +28,7 @@
   text-decoration: none;
   border-radius: 20px 50px;
   background-color: #fff;
-  transition: all 0.4s ease-out
+  transition: all 0.4s ease-out;
 }
 
 .navbar-container {
@@ -93,6 +93,14 @@
 .fa-bars:hover {
   color: #41df49;
 }
+.fa-times {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.fa-times:hover {
+  color: #d65a5a;
+}
 
 .nav-links-mobile {
   display: none;
@@ -104,20 +112,20 @@
 @media only screen and (max-width: 5000px) {
   .navbar-container {
     max-width: 5000px;
-}
+  }
 }
 
 @media only screen and (max-width: 2000px) {
   .navbar-container {
     max-width: 2000px;
-}
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   .nav-menu {
     width: 50vw;
   }
-  .navbar-logo{
+  .navbar-logo {
     transform: translate(5%, 0%);
   }
 }
@@ -161,7 +169,7 @@
     width: 100%;
     display: table;
   }
-  ul{
+  ul {
     padding-left: 0;
   }
 
@@ -195,15 +203,6 @@
     cursor: pointer;
   }
 
-  .fa-times {
-    color: #fff;
-    font-size: 2rem;
-  }
-
-  .fa-times:hover {
-    color: #d65a5a;
-  }
-
   .nav-links-mobile {
     display: block;
     text-align: center;
@@ -230,47 +229,46 @@
 }
 
 @media only screen and (max-width: 386px) {
-  .navbar-logo{
+  .navbar-logo {
     transform: translate(10%, 32%);
   }
 }
 
 @media only screen and (max-width: 367px) {
-  .nav-links-mobile{
+  .nav-links-mobile {
     width: 85%;
   }
-  .navbar-logo{
+  .navbar-logo {
     transform: translate(10%, 35%);
   }
 }
 
 @media only screen and (max-width: 360px) {
-  .navbar-logo{
+  .navbar-logo {
     transform: translate(12%, 35%);
   }
 }
 
 @media only screen and (max-width: 350px) {
-  .navbar-logo{
+  .navbar-logo {
     transform: translate(10%, 35%);
   }
 }
 @media only screen and (max-width: 346px) {
-  .nav-links-mobile{
+  .nav-links-mobile {
     width: 90%;
   }
 }
 
 @media only screen and (max-width: 340px) {
-  .navbar-logo{
+  .navbar-logo {
     transform: translate(8%, 38%);
     font-size: 25px;
   }
-  
 }
 
 @media only screen and (max-width: 330px) {
-  .navbar-logo{
+  .navbar-logo {
     transform: translate(10%, 40%);
     font-size: 22px;
     line-height: 0px;
@@ -278,48 +276,48 @@
 }
 
 @media only screen and (max-width: 327px) {
-  .nav-links-mobile{
+  .nav-links-mobile {
     width: 95%;
   }
-  .navbar-logo{
+  .navbar-logo {
     transform: translate(10%, 45%);
   }
 }
 
 @media only screen and (max-width: 320px) {
-  .navbar-logo{
+  .navbar-logo {
     transform: translate(8%, 50%);
   }
-  .nav-links-mobile{
+  .nav-links-mobile {
     width: 90%;
   }
 }
 
 @media only screen and (max-width: 310px) {
-  .navbar-logo{
+  .navbar-logo {
     transform: translate(2%, 50%);
     margin-left: 10px;
   }
-  .nav-links-mobile{
+  .nav-links-mobile {
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 300px) {
-  .navbar-logo{
+  .navbar-logo {
     transform: translate(2%, 60%);
   }
 }
 
 @media only screen and (max-width: 295px) {
-  .nav-links-mobile{
+  .nav-links-mobile {
     width: 100%;
     font-size: 18px;
   }
-  .nav-links{
+  .nav-links {
     font-size: 18px;
   }
-  .navbar-logo{
+  .navbar-logo {
     font-size: 20px;
   }
 }
