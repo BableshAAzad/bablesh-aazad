@@ -62,8 +62,8 @@ export default function Products(props) {
             }}
             size="large"
             color="secondary"
-            defaultPage={1}
-            siblingCount={1}
+            defaultPage={0}
+            siblingCount={0}
             boundaryCount={0}
             showFirstButton
             showLastButton

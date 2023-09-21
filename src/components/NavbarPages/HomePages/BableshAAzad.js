@@ -5,7 +5,7 @@ import bableshpic from './../../../images/bob.jpg';
 export default function BableshAAzad(props) {
     return (
         <div>
-            <div className="container mt-3">
+            <div className="container mt-2">
                 <section className="custom-box">
                     <div className="container-fluid">
                         <div className="row d-flex justify-content-center align-items-center h-100">

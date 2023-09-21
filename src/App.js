@@ -22,7 +22,7 @@ import Dashboard from './components/LoginPages/Dashboard';
 import YoutubeData from './components/NavbarPages/HomePages/YoutubeData';
 import HowItWorks from './components/aboutUs/HowItWorks';
 import Cards2 from './components/NavbarPages/ProductsPages/Cards2';
-import Support from './components/FooterPages/ContactUs/Support'
+import Support from './components/FooterPages/ContactUs/Support';
 
 function ScrollToTop() {
   const { pathname } = useLocation();

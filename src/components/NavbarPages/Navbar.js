@@ -1,9 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 // import { Button } from './Button';
-import { NavLink } from 'react-router-dom';
-import './Navbar.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDragon, faHouse, faShoppingCart, faWrench, faUser } from '@fortawesome/free-solid-svg-icons';
+import { NavLink} from "react-router-dom";
+import "./Navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDragon,
+  faHouse,
+  faShoppingCart,
+  faWrench,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -31,40 +37,54 @@ function Navbar() {
         closeMobileMenu(false);
       }
     };
-    document.addEventListener("mousedown", handler)
+    document.addEventListener("mousedown", handler);
     return () => {
-      document.removeEventListener("mousedown", handler)
-    }
-  })
+      document.removeEventListener("mousedown", handler);
+    };
+  });
 
-  window.addEventListener('resize', showButton);
+  window.addEventListener("resize", showButton);
 
   return (
     <>
-      <nav className='navbar'>
-        <div className='navbar-container' ref={manuRef}>
-          <NavLink to='https://bableshaazad.com/' aria-label='BableshAAzad' className='navbar-logo' onClick={closeMobileMenu}>
+      <nav className="navbar">
+        <div className="navbar-container" ref={manuRef}>
+          <NavLink
+            to="https://bableshaazad.com/"
+            aria-label="BableshAAzad"
+            className="navbar-logo"
+            onClick={closeMobileMenu}
+          >
             BableshAAzad.com&nbsp;
             <FontAwesomeIcon icon={faDragon} beat />
           </NavLink>
-          <div className='menu-icon' onClick={handleClick}>
+          <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <NavLink to='/' className='nav-links' style={({isActive})=>{
-                return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
-              }} onClick={closeMobileMenu}>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <NavLink
+                to="/"
+                className="nav-links"
+                style={({ isActive }) => {
+                  return {
+                    backgroundColor: isActive ? "rgb(26, 82, 236)" : "",
+                  };
+                }}
+                onClick={closeMobileMenu}
+              >
                 <FontAwesomeIcon icon={faHouse} fade />
                 &nbsp;Home
               </NavLink>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <NavLink
-                to='/services'
-                className='nav-links'
-                style={({isActive})=>{
-                  return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
+                to="/services"
+                className="nav-links"
+                style={({ isActive }) => {
+                  return {
+                    backgroundColor: isActive ? "rgb(26, 82, 236)" : "",
+                  };
                 }}
                 onClick={closeMobileMenu}
               >
@@ -73,12 +93,14 @@ function Navbar() {
               </NavLink>
             </li>
 
-            <li className='nav-item'>
+            <li className="nav-item">
               <NavLink
-                to='/products'
-                className='nav-links'
-                style={({isActive})=>{
-                  return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
+                to="/products"
+                className="nav-links"
+                style={({ isActive }) => {
+                  return {
+                    backgroundColor: isActive ? "rgb(26, 82, 236)" : "",
+                  };
                 }}
                 onClick={closeMobileMenu}
               >
@@ -89,10 +111,12 @@ function Navbar() {
 
             <li>
               <NavLink
-                to='/logIn'
-                className='nav-links-mobile'
-                style={({isActive})=>{
-                  return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
+                to="/logIn"
+                className="nav-links-mobile"
+                style={({ isActive }) => {
+                  return {
+                    backgroundColor: isActive ? "rgb(26, 82, 236)" : "",
+                  };
                 }}
                 onClick={closeMobileMenu}
               >
@@ -102,10 +126,17 @@ function Navbar() {
             </li>
           </ul>
           {button && (
-            <NavLink to='/logIn' className='loginCSS' style={({isActive})=>{
-              return{backgroundColor: isActive ? 'rgb(26, 82, 236)' : ''}
-            }}>
-              <FontAwesomeIcon icon={faUser} flip />&nbsp;SignIn</NavLink>)}
+            <NavLink
+              to="/logIn"
+              className="loginCSS"
+              style={({ isActive }) => {
+                return { backgroundColor: isActive ? "rgb(26, 82, 236)" : "" };
+              }}
+            >
+              <FontAwesomeIcon icon={faUser} flip />
+              &nbsp;SignIn
+            </NavLink>
+          )}
         </div>
       </nav>
     </>

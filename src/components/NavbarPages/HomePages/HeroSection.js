@@ -11,7 +11,6 @@ function HeroSection(props) {
     <div className="hero-container">
       {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
       <img src={p9} alt="BableshAAzad" />
-
       <h2 className="my-2">{props.heading}</h2>
       <p>Want Your Own Website ?</p>
       <div className='hero-btns'>
