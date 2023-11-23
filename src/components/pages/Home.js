@@ -1,4 +1,5 @@
 import "../../App.css";
+import "./Homecs.css";
 import HeroSection from "../NavbarPages/HomePages/HeroSection";
 import { Link } from "react-router-dom";
 import BableshAAzad from "../NavbarPages/HomePages/BableshAAzad";
@@ -6,8 +7,7 @@ import YoutubeData from "../NavbarPages/HomePages/YoutubeData";
 import { Box, Pagination, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Projects from '../../Projects/Projects';
-import Services from '../../components/pages/Services';
-import Products from '../../components/pages/Products';
+// import pic from '../../images/tirath.jpg';
 
 const OpenPage = (props) => {
   const { children, page, index } = props;
@@ -43,13 +43,16 @@ export default function Home(props) {
           <YoutubeData></YoutubeData>
         </OpenPage>
         <OpenPage page={activePage} index={2}>
-          <Projects heading="Try Text Editor- Word counter, Charecter Counter, Remove Extra Spaces etc."/>
+          <Projects heading="Try Text Editor- Word counter, Charecter Counter, Remove Extra Spaces etc." />
         </OpenPage>
         <OpenPage page={activePage} index={3}>
-          <Services></Services>
+          <h2>Next project is coming soon...</h2>
+          {/* <Link href="#" className="homeTirath"> */}
+            {/* <img src={pic} alt="Tirathgarh" className="homeTirath"/> */}
+          {/* </Link> */}
         </OpenPage>
         <OpenPage page={activePage} index={4}>
-          <Products></Products>
+          {/* <Products></Products> */}
         </OpenPage>
         <OpenPage page={activePage} index={5}>
           Page5
