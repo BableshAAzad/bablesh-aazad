@@ -27,21 +27,23 @@ export default function Home(props) {
         <OpenPage page={activePage} index={1}>
           <HeroSection heading="Want Affordable Website" />
           <BableshAAzad heading="Hi I am Bablesh AAzad"></BableshAAzad>
-          <h3 className="my-3" style={{ marginLeft: "10px" }}>
-            Visit my projects and use on your requirment
-          </h3>
+          <section id="mainMarquee">
+            <h3 className="my-3" id='marqueeTag'>
+              Visit my projects and use on your requirment
+            </h3>
+          </section>
           <div className="proje mb-4">
             <Link to="/projects" className="projectN">
               | 1.Text-Editor |
             </Link>
-            <Link to="/" className="projectM">
-              | 2.Pdf-Merge |
-            </Link>
-            <Link to="/" className="projectM">
-              | 3.News-App |
-            </Link>
             <Link to="/ageCalulate" className="projectN">
-              | 3.Age-Calculator |
+              | 2.Age-Calculator |
+            </Link>
+            <Link to="/" className="projectM">
+              | 3.Pdf-Merge |
+            </Link>
+            <Link to="/" className="projectM">
+              | 4.News-App |
             </Link>
           </div>
           <YoutubeData></YoutubeData>
@@ -50,13 +52,13 @@ export default function Home(props) {
           <Projects heading="Try Text Editor- Word counter, Charecter Counter, Remove Extra Spaces etc." />
         </OpenPage>
         <OpenPage page={activePage} index={3}>
-          <h2>Next project is coming soon...</h2>
-          {/* <Link href="#" className="homeTirath"> */}
-            {/* <img src={pic} alt="Tirathgarh" className="homeTirath"/> */}
-          {/* </Link> */}
+          <AgeCalculate />
         </OpenPage>
         <OpenPage page={activePage} index={4}>
-        <AgeCalculate/>
+          <h2>Next project is coming soon...</h2>
+          {/* <Link href="#" className="homeTirath"> */}
+          {/* <img src={pic} alt="Tirathgarh" className="homeTirath"/> */}
+          {/* </Link> */}
         </OpenPage>
         <OpenPage page={activePage} index={5}>
           Page5
