@@ -8,6 +8,7 @@ import { Box, Pagination, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Projects from '../../Projects/Projects';
 // import pic from '../../images/tirath.jpg';
+import AgeCalculate from "./../../Projects/AgeCalculator/AgeCalculate"
 
 const OpenPage = (props) => {
   const { children, page, index } = props;
@@ -39,6 +40,9 @@ export default function Home(props) {
             <Link to="/" className="projectM">
               | 3.News-App |
             </Link>
+            <Link to="/ageCalulate" className="projectN">
+              | 3.Age-Calculator |
+            </Link>
           </div>
           <YoutubeData></YoutubeData>
         </OpenPage>
@@ -52,7 +56,7 @@ export default function Home(props) {
           {/* </Link> */}
         </OpenPage>
         <OpenPage page={activePage} index={4}>
-          {/* <Products></Products> */}
+        <AgeCalculate/>
         </OpenPage>
         <OpenPage page={activePage} index={5}>
           Page5

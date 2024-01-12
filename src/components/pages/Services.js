@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Services.css';
-import {Link} from 'react-router-dom';
-import p4 from './../../images/p4.jpg';
-import p5 from './../../images/p5.jpg';
-import p6 from './../../images/p6.jpg';
+import { Link } from 'react-router-dom';
+// import p4 from './../../images/p4.jpg';
+// import p5 from './../../images/p5.jpg';
+// import p6 from './../../images/p6.jpg';
 
 export default function Services(props) {
     const [isExpanded1, setIsExpanded1] = useState(false);
@@ -13,7 +13,7 @@ export default function Services(props) {
         <>
             <div className="container mt-3 websi1">
                 <div className="jumbotron">
-                    {/* <img src={p3} className="jumboImg" alt="BableshAAzad" /> */}
+                    {/* <img src={p4} className="jumboImg" alt="BableshAAzad" /> */}
                     <h3 className='text-break text-light'>Welcome to BableshAAzad.com</h3>
                     <p className="lead">This is wonderful place for Website order</p>
                     {/* <hr className="my-4" /> */}
@@ -30,7 +30,8 @@ export default function Services(props) {
                         {/* ... existing code ... */}
                         <div className="col-md-4 mb-3">
                             <div className="card shadow">
-                                <img src={p6} className="w-100 border-bottom cardImg" alt="Freinds" />
+                                {/* <img src={p6} className="w-100 border-bottom cardImg" alt="Freinds" /> */}
+                                <img src="https://source.unsplash.com/1400x400/?coding, java" className="w-100 border-bottom cardImg" alt="Freinds" />
                                 <div className="card-body">
                                     <h5>Website Designing and maintenance</h5>
                                     <div className="underline mx-auto"></div>
@@ -52,9 +53,10 @@ export default function Services(props) {
                         </div>
                         <div className="col-md-4 mb-3">
                             <div className="card shadow">
-                                <img src={p4} className="w-100 border-bottom cardImg" alt="Freinds" />
+                                {/* <img src={p4} className="w-100 border-bottom cardImg" alt="Freinds" /> */}
+                                <img src="https://source.unsplash.com/1400x400/?travling, cars" className="w-100 border-bottom cardImg" alt="Freinds" />
                                 <div className="card-body">
-                                    <h5>Treveling Guid</h5>
+                                    <h5>Treveling Guide</h5>
                                     <div className="underline mx-auto"></div>
                                     <p>
                                         {isExpanded3
@@ -74,7 +76,8 @@ export default function Services(props) {
                         </div>
                         <div className="col-md-4 mb-3">
                             <div className="card shadow">
-                                <img src={p5} className="w-100 border-bottom cardImg" alt="Freinds" />
+                                {/* <img src={p5} className="w-100 border-bottom cardImg" alt="Freinds" /> */}
+                                <img src="https://source.unsplash.com/1400x400/?learning, java" className="w-100 border-bottom cardImg" alt="Freinds" />
                                 <div className="card-body">
                                     <h5>Web Designing Learning</h5>
                                     <div className="underline mx-auto"></div>

@@ -24,9 +24,10 @@ const YoutubeData = () => {
         const statistics = data.items[0].statistics;
         setSubscriberCount(statistics.subscriberCount);
         setVideoCount(statistics.videoCount);
-        console.log("Fetched YouTube data:", data);
+        // console.log("Fetched YouTube data:", data);
       } catch (error) {
-        console.log("Error fetching YouTube data:", error);
+        // console.log("Error fetching YouTube data:", error);
+        <h3 style={{color:"red"}}>Server Error</h3>
       }
     };
 
