@@ -36,7 +36,7 @@ export default function Home(props) {
             <Link to="/projects" className="projectN">
               | 1.Text-Editor |
             </Link>
-            <Link to="/ageCalulate" className="projectN">
+            <Link to="/ageCalulate" className="projectN" style={{color : "green"}}>
               | 2.Age-Calculator |
             </Link>
             <Link to="/" className="projectM">
