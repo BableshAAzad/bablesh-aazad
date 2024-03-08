@@ -17,4 +17,4 @@ jobs:
         server: ftp.bableshaazad.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /home/bablesha/repositories/BableshAAzad.com-new
+        server-dir: /home/bablesha/repositories/BableshAAzad.com-new/
