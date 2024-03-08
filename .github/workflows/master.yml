@@ -18,5 +18,5 @@ jobs:
         # username: ${{ secrets.ftp_username }}
         username: bablesha
         # password: ${{ secrets.ftp_password }}
-        password: AAzad@12345
+        password: AAzad@8817
         server-dir: /home/bablesha/repositories/BableshAAzad.com-new/public/index.html/
