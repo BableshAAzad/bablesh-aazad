@@ -15,6 +15,8 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.bableshaazad.com
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
+        # username: ${{ secrets.ftp_username }}
+        username: bablesha
+        # password: ${{ secrets.ftp_password }}
+        password: AAzad@8817
         server-dir: /home/bablesha/repositories/BableshAAzad.com-new/
