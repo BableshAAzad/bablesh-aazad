@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/bablesha/repositories/BableshAAzad.com-new/public/index.html/
+    - export DEPLOYPATH=/home/bablesha/public_html/
     - /bin/cp * $DEPLOYPATH
