@@ -15,5 +15,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.bableshaazad.com
-        username: bableshaazad@bableshaazad.com
-        password: AAzad@8817
+        username: ${{ secrets.FTP_PASSWORD }}
+        password: ${{ secrets.FTP_USERNAME }}
