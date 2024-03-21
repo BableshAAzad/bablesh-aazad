@@ -32,7 +32,7 @@ export default function Home(props) {
               Visit my projects and use on your requirment
             </h3>
           </section>
-          <div className="proje mb-4">
+          <div className="proje mb-4" style={{textWrap: "wrap"}}>
             <Link to="/projects" className="projectN">
               | 1.Text-Editor |
             </Link>
