@@ -24,6 +24,7 @@ import YoutubeData from './components/NavbarPages/HomePages/YoutubeData';
 import HowItWorks from './components/aboutUs/HowItWorks';
 import Cards2 from './components/NavbarPages/ProductsPages/Cards2';
 import Support from './components/FooterPages/ContactUs/Support';
+import AnalogWatch from './Projects/AnalogClock/AnalogWatch';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -69,6 +70,10 @@ function App(props) {
 
           <Route exact path="/ageCalulate" element={<AgeCalculate/>}></Route>
           {/* 1 Footer About us pages */}
+          <Route path="/analogClock" element={<AnalogWatch/>} />
+
+
+
           <Route exact path='/howItWorks' element={<HowItWorks></HowItWorks>}></Route>
           {/* 2 Footer Contact us pages */}
           <Route exact path='/contact' element={<Contact heading="Contact us for any Query"></Contact>}></Route>

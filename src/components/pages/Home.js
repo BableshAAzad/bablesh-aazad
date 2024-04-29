@@ -45,6 +45,9 @@ export default function Home(props) {
             <Link to="/" className="projectM">
               | 4.News-App |
             </Link>
+            <Link to="/analogClock" className="projectN">
+              | 5.Analog-Clock |
+            </Link>
           </div>
           <YoutubeData></YoutubeData>
         </OpenPage>
