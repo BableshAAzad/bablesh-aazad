@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './Projects.css';
-import { Link } from 'react-router-dom';
-import TextForm from './TextEditor/TextForm';
-import Alert from './TextEditor/Alert';
+import { Link, Outlet } from 'react-router-dom';
+import Alert from './Alert';
+import './TextEditor.css';
+import TextForm from './TextForm';
 
-export default function Projects(props) {
+export default function TextEditor(props) {
     const [mode] = useState('light'); //whether dark mode is enabled or not
     const [alert, setAlert] = useState(null);
 
@@ -37,8 +37,9 @@ export default function Projects(props) {
                 <h3>{props.heading}</h3>
                 <TextForm showAlert={showAlert} mode={mode} />
                 <button className='btn btn-success textAbout'>
-                <Link className='textAboutLink' to='/about'>About of Text-Editor</Link>
+                    <Link className='textAboutLink' to='/projectComponent/textEditor/about'>About of Text-Editor</Link>
                 </button>
+                <Outlet />
             </div>
         </>
     )

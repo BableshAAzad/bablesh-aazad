@@ -1,10 +1,19 @@
-import React from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 // import Icon from '@mui/icons-material';
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+      window.scrollTo(0, 620);
+  }, [pathname]);
+  return null;
+}
 
 export default function About(props) {
   // let myStyle = {
@@ -19,6 +28,7 @@ export default function About(props) {
 
   return (
     <div className="container">
+      <ScrollToTop/>
       <h1 className="my-3" style={{ color: "#23B1CD" }}>
         About Us Text Editor
       </h1>

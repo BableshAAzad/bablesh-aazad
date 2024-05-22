@@ -1,14 +1,14 @@
-import "../../App.css";
-import "./Homecs.css";
-import HeroSection from "../NavbarPages/HomePages/HeroSection";
-import { Link } from "react-router-dom";
-import BableshAAzad from "../NavbarPages/HomePages/BableshAAzad";
-import YoutubeData from "../NavbarPages/HomePages/YoutubeData";
 import { Box, Pagination, Typography } from "@mui/material";
 import React, { useState } from "react";
-import Projects from '../../Projects/Projects';
+import { Link } from "react-router-dom";
+import "../../App.css";
+import Projects from '../../Projects/TextEditor/TextEditor';
+import BableshAAzad from "../NavbarPages/HomePages/BableshAAzad";
+import HeroSection from "../NavbarPages/HomePages/HeroSection";
+import YoutubeData from "../NavbarPages/HomePages/YoutubeData";
+import "./Homecs.css";
 // import pic from '../../images/tirath.jpg';
-import AgeCalculate from "./../../Projects/AgeCalculator/AgeCalculate"
+import AgeCalculate from "./../../Projects/AgeCalculator/AgeCalculate";
 
 const OpenPage = (props) => {
   const { children, page, index } = props;
@@ -33,19 +33,19 @@ export default function Home(props) {
             </h3>
           </section>
           <div className="proje mb-4" style={{textWrap: "wrap"}}>
-            <Link to="/projects" className="projectN">
+            <Link to="/projectComponent/textEditor" className="projectN">
               | 1.Text-Editor |
             </Link>
-            <Link to="/ageCalulate" className="projectN" style={{color : "green"}}>
+            <Link to="/projectComponent/ageCalulate" className="projectN" style={{color : "green"}}>
               | 2.Age-Calculator |
             </Link>
-            <Link to="/" className="projectM">
+            <Link to="/projectComponent/" className="projectM">
               | 3.Pdf-Merge |
             </Link>
             <Link to="/" className="projectM">
               | 4.News-App |
             </Link>
-            <Link to="/analogClock" className="projectN">
+            <Link to="/projectComponent/analogClock" className="projectN">
               | 5.Analog-Clock |
             </Link>
           </div>
