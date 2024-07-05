@@ -36,7 +36,7 @@ export default function Home(props) {
             <Link to="/projectComponent/textEditor" className="projectN">
               | 1.Text-Editor |
             </Link>
-            <Link to="/projectComponent/ageCalulate" className="projectN" style={{color : "green"}}>
+            <Link to="/projectComponent/ageCalculate" className="projectN" style={{color : "green"}}>
               | 2.Age-Calculator |
             </Link>
             <Link to="/projectComponent/" className="projectM">
@@ -47,6 +47,9 @@ export default function Home(props) {
             </Link>
             <Link to="/projectComponent/analogClock" className="projectN">
               | 5.Analog-Clock |
+            </Link>
+            <Link to="/projectComponent/basicCalculatorFirst" className="projectN">
+            | 6.Basic-Calculator-First |
             </Link>
           </div>
           <YoutubeData></YoutubeData>
