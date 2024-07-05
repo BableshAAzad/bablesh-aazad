@@ -25,6 +25,7 @@ import YoutubeData from './components/NavbarPages/HomePages/YoutubeData';
 import Cards from './components/NavbarPages/ProductsPages/Cards';
 import Cards2 from './components/NavbarPages/ProductsPages/Cards2';
 import HowItWorks from './components/aboutUs/HowItWorks';
+import BasicCalculatorFirst from './Projects/BasicCalculatorFirst/BasicCalculatorFirst';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -53,28 +54,34 @@ function App(props) {
           <Route path='/youtubeData' element={<YoutubeData />} />
           {/* Services page */}
           <Route path='/services' element={<Services heading='There 3 Type of services providing' />} />
+          
           {/* Product page */}
           <Route path='/products' element={<Products heading='Templates: ' />} />
           <Route path='/cards' element={<Cards />} />
           <Route path="/cards2" element={<Cards2 />} />
+          
           {/* Login Pages */}
           <Route path='/logIn' element={<LogIn heading='Login' />} />
           <Route path='/signUp' element={<SignUp heading='SignUp' />} />
           <Route path='/forgetPassword' element={<ForgetPassword heading='Forget Password' />} />
           <Route path="/dashboard" element={isLogged ? <Dashboard /> : <Navigate to="/logIn" replace state={data} />} />
+          
           {/*^ Projects */}
           <Route path='/projectComponent' element={<ProjectComponent />}>
             <Route path='textEditor' element={<TextEditor heading="Try Text Editor- Word counter, Charecter Counter, Remove Extra Spaces etc." />}>
               <Route path='about' element={<About />} />
             </Route>
-            <Route path="ageCalulate" element={<AgeCalculate />} />
+            <Route path="ageCalculate" element={<AgeCalculate />} />
             <Route path="analogClock" element={<AnalogWatch />} />
+            <Route path="basicCalculatorFirst" element={<BasicCalculatorFirst/>} />
           </Route>
 
           <Route path='/howItWorks' element={<HowItWorks></HowItWorks>} />
+          
           {/* 2 Footer Contact us pages */}
           <Route path='/contact' element={<Contact heading="Contact us for any Query" />} />
           <Route path='/support' element={<Support />} />
+         
           {/* 3 Footer Video pages */}
           <Route path='/videoUpload' element={<VideoUpload />} />
 
