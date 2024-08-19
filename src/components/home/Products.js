@@ -1,10 +1,10 @@
 
-import "../../App.css";
-import "./Products.css";
-import Cards from "../NavbarPages/ProductsPages/Cards";
-import Cards2 from "../NavbarPages/ProductsPages/Cards2";
-import React, { useState } from "react";
 import { Box, Pagination, Typography } from "@mui/material";
+import React, { useState } from "react";
+import "../../App.css";
+import Cards from "../navbar/product-page/Cards";
+import Cards2 from "../navbar/product-page/Cards2";
+import "./Products.css";
 
 const OpenPage = (props) => {
   const { children, page, index } = props;

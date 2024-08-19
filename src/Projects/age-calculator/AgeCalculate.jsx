@@ -1,6 +1,6 @@
 import React from 'react';
 import DateObject from "react-date-object";
-import "../AgeCalculator/AgeCalculator.mdule.css";
+import "./AgeCalculator.mdule.css";
 
 function AgeCalculate() {
   function ageCalc() {

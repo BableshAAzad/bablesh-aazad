@@ -2,13 +2,15 @@ import { Box, Pagination, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
-import Projects from '../../Projects/TextEditor/TextEditor';
-import BableshAAzad from "../NavbarPages/HomePages/BableshAAzad";
-import HeroSection from "../NavbarPages/HomePages/HeroSection";
-import YoutubeData from "../NavbarPages/HomePages/YoutubeData";
+import Projects from '../../projects/text-editor/TextEditor';
+import BableshAAzad from "../navbar/home-page/BableshAAzad";
+import HeroSection from "../navbar/home-page/HeroSection";
+import YoutubeData from "../navbar/home-page/YoutubeData";
 import "./Homecs.css";
-// import pic from '../../images/tirath.jpg';
-import AgeCalculate from "./../../Projects/AgeCalculator/AgeCalculate";
+import AgeCalculate from "../../projects/age-calculator/AgeCalculate";
+import DotPuzzel from "../../projects/puzzel-game/DotPuzzel"
+import AnalogWatch from "../../projects/analog-clock/AnalogWatch"
+import BasicCalculatorFirst from "../../projects/basic-calculator-first/BasicCalculatorFirst"
 
 const OpenPage = (props) => {
   const { children, page, index } = props;
@@ -32,24 +34,27 @@ export default function Home(props) {
               Visit my projects and use on your requirment
             </h3>
           </section>
-          <div className="proje mb-4" style={{textWrap: "wrap"}}>
+          <div className="proje mb-4" style={{ textWrap: "wrap" }}>
             <Link to="/projectComponent/textEditor" className="projectN">
               | 1.Text-Editor |
             </Link>
-            <Link to="/projectComponent/ageCalculate" className="projectN" style={{color : "green"}}>
+            <Link to="/projectComponent/ageCalculate" className="projectN" style={{ color: "green" }}>
               | 2.Age-Calculator |
             </Link>
-            <Link to="/projectComponent/" className="projectM">
+            <Link to="https://github.com/BableshAAzad/pdf-merge-main" target="_blank" className="projectN">
               | 3.Pdf-Merge |
             </Link>
             <Link to="/" className="projectM">
               | 4.News-App |
             </Link>
-            <Link to="/projectComponent/analogClock" className="projectN">
+            <Link to="/projectComponent/analogClock" className="projectN" style={{ color: "green" }}>
               | 5.Analog-Clock |
             </Link>
             <Link to="/projectComponent/basicCalculatorFirst" className="projectN">
-            | 6.Basic-Calculator-First |
+              | 6.Basic-Calculator-First |
+            </Link>
+            <Link to="/projectComponent/puzzel-game" className="projectN" style={{ color: "green" }}>
+              | 7.Dot Puzzel |
             </Link>
           </div>
           <YoutubeData></YoutubeData>
@@ -61,16 +66,13 @@ export default function Home(props) {
           <AgeCalculate />
         </OpenPage>
         <OpenPage page={activePage} index={4}>
-          <h2>Next project is coming soon...</h2>
-          {/* <Link href="#" className="homeTirath"> */}
-          {/* <img src={pic} alt="Tirathgarh" className="homeTirath"/> */}
-          {/* </Link> */}
+          <DotPuzzel />
         </OpenPage>
         <OpenPage page={activePage} index={5}>
-          Page5
+          <AnalogWatch />
         </OpenPage>
         <OpenPage page={activePage} index={6}>
-          Page6
+          <BasicCalculatorFirst />
         </OpenPage>
         <OpenPage page={activePage} index={7}>
           Page7
@@ -82,7 +84,7 @@ export default function Home(props) {
           Page9
         </OpenPage>
         <OpenPage page={activePage} index={10}>
-          Page10
+          <h2>Next project is coming soon...</h2>
         </OpenPage>
         <Typography variant="h5" color="secondary" align="center">
           See to more collections

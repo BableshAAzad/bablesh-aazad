@@ -1,31 +1,35 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom';
-import AnalogWatch from "../src/Projects/AnalogClock/AnalogWatch";
-import About from "../src/Projects/TextEditor/About";
-import BableshAAzad from './../../bablesh-aazad/src/components/NavbarPages/HomePages/BableshAAzad';
-import Footer from './../src/components/FooterPages/Footer';
-import ForgetPassword from './../src/components/LoginPages/ForgetPassword';
-import LogIn from './../src/components/LoginPages/LogIn';
-import SignUp from './../src/components/LoginPages/SignUp';
-import Navbar from './../src/components/NavbarPages/Navbar';
-import Home from './../src/components/pages/Home';
-import Products from './../src/components/pages/Products';
-import Services from './../src/components/pages/Services';
 import './App.css';
-import AgeCalculate from './Projects/AgeCalculator/AgeCalculate';
-import ProjectComponent from './Projects/ProjectComponent';
-import TextEditor from './Projects/TextEditor/TextEditor';
-import Error from './components/Error';
-import Contact from './components/FooterPages/ContactUs/Contact';
-import Support from './components/FooterPages/ContactUs/Support';
-import VideoUpload from './components/FooterPages/Video/VideoUpload';
-import Dashboard from './components/LoginPages/Dashboard';
-import HeroSection from './components/NavbarPages/HomePages/HeroSection';
-import YoutubeData from './components/NavbarPages/HomePages/YoutubeData';
-import Cards from './components/NavbarPages/ProductsPages/Cards';
-import Cards2 from './components/NavbarPages/ProductsPages/Cards2';
-import HowItWorks from './components/aboutUs/HowItWorks';
-import BasicCalculatorFirst from './Projects/BasicCalculatorFirst/BasicCalculatorFirst';
+import Navbar from './components/navbar/Navbar';
+import Home from './components/home/Home';
+import Footer from './components/footer/Footer';
+import Spinner from './components/spinner/Spinner';
+
+// Lazy-loaded components
+const HowItWorks = React.lazy(() => import('./components/about-us/HowItWorks'));
+const Error = React.lazy(() => import('./components/Error'));
+const Contact = React.lazy(() => import('./components/footer/contact-us/Contact'));
+const Support = React.lazy(() => import('./components/footer/contact-us/Support'));
+const VideoUpload = React.lazy(() => import('./components/footer/videos/VideoUpload'));
+const Products = React.lazy(() => import('./components/home/Products'));
+const Services = React.lazy(() => import('./components/home/Services'));
+const Dashboard = React.lazy(() => import('./components/login/Dashboard'));
+const ForgetPassword = React.lazy(() => import('./components/login/ForgetPassword'));
+const LogIn = React.lazy(() => import('./components/login/LogIn'));
+const SignUp = React.lazy(() => import('./components/login/SignUp'));
+const BableshAAzad = React.lazy(() => import('./components/navbar/home-page/BableshAAzad'));
+const HeroSection = React.lazy(() => import('./components/navbar/home-page/HeroSection'));
+const YoutubeData = React.lazy(() => import('./components/navbar/home-page/YoutubeData'));
+const Cards = React.lazy(() => import('./components/navbar/product-page/Cards'));
+const Cards2 = React.lazy(() => import('./components/navbar/product-page/Cards2'));
+const AgeCalculate = React.lazy(() => import('./projects/age-calculator/AgeCalculate'));
+const AnalogWatch = React.lazy(() => import("./projects/analog-clock/AnalogWatch"));
+const BasicCalculatorFirst = React.lazy(() => import('./projects/basic-calculator-first/BasicCalculatorFirst'));
+const ProjectComponent = React.lazy(() => import('./projects/ProjectComponent'));
+const About = React.lazy(() => import("./projects/text-editor/About"));
+const TextEditor = React.lazy(() => import('./projects/text-editor/TextEditor'));
+const DotPuzzel = React.lazy(() => import('./projects/puzzel-game/DotPuzzel'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -41,6 +45,7 @@ function App(props) {
   let data = {
     "st": "User not loged In"
   }
+
   return (
     <>
       <Router>
@@ -49,44 +54,223 @@ function App(props) {
         <Routes>
           {/* Navbar Pages */}
           <Route path='/' element={<Home />} />
-          <Route path='/heroSection' element={<HeroSection />} />
-          <Route path='/bableshAAzad' element={<BableshAAzad />} />
-          <Route path='/youtubeData' element={<YoutubeData />} />
+
+          <Route
+            path='/heroSection'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <HeroSection />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path='/bableshAAzad'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <BableshAAzad />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path='/youtubeData'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <YoutubeData />
+              </Suspense>
+            }
+          />
+
           {/* Services page */}
-          <Route path='/services' element={<Services heading='There 3 Type of services providing' />} />
-          
+          <Route
+            path='/services'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <Services heading='There 3 Type of services providing' />
+              </Suspense>
+            }
+          />
+
           {/* Product page */}
-          <Route path='/products' element={<Products heading='Templates: ' />} />
-          <Route path='/cards' element={<Cards />} />
-          <Route path="/cards2" element={<Cards2 />} />
-          
+          <Route
+            path='/products'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <Products heading='Templates: ' />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path='/cards'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <Cards />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path='/cards2'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <Cards2 />
+              </Suspense>
+            }
+          />
+
           {/* Login Pages */}
-          <Route path='/logIn' element={<LogIn heading='Login' />} />
-          <Route path='/signUp' element={<SignUp heading='SignUp' />} />
-          <Route path='/forgetPassword' element={<ForgetPassword heading='Forget Password' />} />
-          <Route path="/dashboard" element={isLogged ? <Dashboard /> : <Navigate to="/logIn" replace state={data} />} />
-          
-          {/*^ Projects */}
-          <Route path='/projectComponent' element={<ProjectComponent />}>
-            <Route path='textEditor' element={<TextEditor heading="Try Text Editor- Word counter, Charecter Counter, Remove Extra Spaces etc." />}>
-              <Route path='about' element={<About />} />
+          <Route
+            path='/logIn'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <LogIn heading='Login' />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path='/signUp'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <SignUp heading='SignUp' />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path='/forgetPassword'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <ForgetPassword heading='Forget Password' />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="/dashboard"
+            element={
+              isLogged ?
+                <Suspense fallback={<Spinner />}>
+                  <Dashboard />
+                </Suspense>
+                :
+                <Navigate to="/logIn" replace state={data} />
+            }
+          />
+
+          {/* Projects */}
+          <Route
+            path='/projectComponent'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <ProjectComponent />
+              </Suspense>
+            }
+          >
+            <Route
+              path='textEditor'
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <TextEditor heading="Try Text Editor- Word counter, Charecter Counter, Remove Extra Spaces etc." />
+                </Suspense>
+              }
+            >
+              <Route
+                path='about'
+                element={
+                  <Suspense fallback={<Spinner />}>
+                    <About />
+                  </Suspense>
+                }
+              />
             </Route>
-            <Route path="ageCalculate" element={<AgeCalculate />} />
-            <Route path="analogClock" element={<AnalogWatch />} />
-            <Route path="basicCalculatorFirst" element={<BasicCalculatorFirst/>} />
+
+            <Route
+              path="ageCalculate"
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <AgeCalculate />
+                </Suspense>
+              }
+            />
+
+            <Route
+              path="analogClock"
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <AnalogWatch />
+                </Suspense>
+              }
+            />
+
+            <Route
+              path="basicCalculatorFirst"
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <BasicCalculatorFirst />
+                </Suspense>
+              }
+            />
+
+            <Route
+              path='puzzel-game'
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <DotPuzzel />
+                </Suspense>
+              }
+            />
           </Route>
 
-          <Route path='/howItWorks' element={<HowItWorks></HowItWorks>} />
-          
-          {/* 2 Footer Contact us pages */}
-          <Route path='/contact' element={<Contact heading="Contact us for any Query" />} />
-          <Route path='/support' element={<Support />} />
-         
-          {/* 3 Footer Video pages */}
-          <Route path='/videoUpload' element={<VideoUpload />} />
+          <Route
+            path='/howItWorks'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <HowItWorks />
+              </Suspense>
+            }
+          />
+
+          {/* Footer Contact us pages */}
+          <Route
+            path='/contact'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <Contact heading="Contact us for any Query" />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path='/support'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <Support />
+              </Suspense>
+            }
+          />
+
+          {/* Footer Video pages */}
+          <Route
+            path='/videoUpload'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <VideoUpload />
+              </Suspense>
+            }
+          />
 
           {/* For Error Page */}
-          <Route path='*' element={<Error />} />
+          <Route
+            path='*'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <Error />
+              </Suspense>
+            }
+          />
         </Routes>
         <Footer />
       </Router>

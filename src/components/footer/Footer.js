@@ -1,19 +1,19 @@
-import React from "react";
-import "./Footer.css";
-import { Button } from "../NavbarPages/HomePages/Button";
-import { Link, NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faDragon,
-  faVrCardboard,
-  faMessage,
+    faDragon,
+    faMessage,
+    faVrCardboard,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import { Button } from "../navbar/home-page/Button";
+import "./Footer.css";
 
 const Footer = () => {
   return (

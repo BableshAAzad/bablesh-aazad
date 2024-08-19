@@ -1,3 +1,7 @@
 {
-    "liveServer.settings.CustomBrowser": "chrome"
+    "liveServer.settings.CustomBrowser": "chrome",
+    "xml.java.home": "",
+    "emmet.preferences": {
+        
+    }
 }
