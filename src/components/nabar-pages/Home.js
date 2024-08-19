@@ -35,10 +35,10 @@ export default function Home(props) {
             </h3>
           </section>
           <div className="proje mb-4" style={{ textWrap: "wrap" }}>
-            <Link to="/projectComponent/textEditor" className="projectN">
+            <Link to="/projects/textEditor" className="projectN">
               | 1.Text-Editor |
             </Link>
-            <Link to="/projectComponent/ageCalculate" className="projectN" style={{ color: "green" }}>
+            <Link to="/projects/ageCalculate" className="projectN" style={{ color: "green" }}>
               | 2.Age-Calculator |
             </Link>
             <Link to="https://github.com/BableshAAzad/pdf-merge-main" target="_blank" className="projectN">
@@ -47,17 +47,17 @@ export default function Home(props) {
             <Link to="/" className="projectM">
               | 4.News-App |
             </Link>
-            <Link to="/projectComponent/analogClock" className="projectN" style={{ color: "green" }}>
+            <Link to="/projects/analogClock" className="projectN" style={{ color: "green" }}>
               | 5.Analog-Clock |
             </Link>
-            <Link to="/projectComponent/basicCalculatorFirst" className="projectN">
+            <Link to="/projects/basicCalculatorFirst" className="projectN">
               | 6.Basic-Calculator-First |
             </Link>
-            <Link to="/projectComponent/puzzel-game" className="projectN" style={{ color: "green" }}>
+            <Link to="/projects/puzzel-game" className="projectN" style={{ color: "green" }}>
               | 7.Dot Puzzel |
             </Link>
           </div>
-          <YoutubeData></YoutubeData>
+          <YoutubeData />
         </OpenPage>
         <OpenPage page={activePage} index={2}>
           <Projects heading="Try Text Editor- Word counter, Charecter Counter, Remove Extra Spaces etc." />
