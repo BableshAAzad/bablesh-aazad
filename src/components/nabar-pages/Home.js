@@ -5,7 +5,7 @@ import "../../App.css";
 import AgeCalculate from "../../projects/age-calculator/AgeCalculate";
 import AnalogWatch from "../../projects/analog-clock/AnalogWatch";
 import BasicCalculatorFirst from "../../projects/basic-calculator-first/BasicCalculatorFirst";
-import DotPuzzleGame from "../../projects/puzzle-game/DotPuzzleGame";
+import DotPuzzleGame from "../../projects/puzzlegame/DotPuzzleGame";
 import Projects from '../../projects/text-editor/TextEditor';
 import BableshAAzad from "../navbar/home-page/BableshAAzad";
 import HeroSection from "../navbar/home-page/HeroSection";

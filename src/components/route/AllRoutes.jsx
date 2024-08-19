@@ -22,7 +22,7 @@ const AnalogWatch = React.lazy(() => import("../../projects/analog-clock/AnalogW
 const BasicCalculatorFirst = React.lazy(() => import('../../projects/basic-calculator-first/BasicCalculatorFirst'));
 const About = React.lazy(() => import("../../projects/text-editor/About"));
 const TextEditor = React.lazy(() => import('../../projects/text-editor/TextEditor'));
-const DotPuzzleGame = React.lazy(() => import('../../projects/puzzle-game/DotPuzzleGame.jsx'));
+const DotPuzzleGame = React.lazy(() => import('../../projects/puzzlegame/DotPuzzleGame.jsx'));
 
 
 function AllRoutes() {
