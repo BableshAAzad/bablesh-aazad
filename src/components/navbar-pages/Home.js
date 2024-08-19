@@ -2,10 +2,11 @@ import { Box, Pagination, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
-import AgeCalculate from "../../projects/age-calculator/AgeCalculate";
-import AnalogWatch from "../../projects/analog-clock/AnalogWatch";
-import BasicCalculatorFirst from "../../projects/basic-calculator-first/BasicCalculatorFirst";
-import Projects from '../../projects/text-editor/TextEditor';
+import AgeCalculate from "../projects/age-calculator/AgeCalculate";
+import AnalogWatch from "../projects/analog-clock/AnalogWatch";
+import BasicCalculatorFirst from "../projects/basic-calculator-first/BasicCalculatorFirst";
+import DotPuzzleGame from "../projects/puzzle-game/DotPuzzleGame";
+import TextEditor from '../projects/text-editor/TextEditor';
 import BableshAAzad from "../navbar/home-page/BableshAAzad";
 import HeroSection from "../navbar/home-page/HeroSection";
 import YoutubeData from "../navbar/home-page/YoutubeData";
@@ -34,10 +35,10 @@ export default function Home(props) {
             </h3>
           </section>
           <div className="proje mb-4" style={{ textWrap: "wrap" }}>
-            <Link to="/projects/textEditor" className="projectN">
+            <Link to="/projects/text-editor" className="projectN">
               | 1.Text-Editor |
             </Link>
-            <Link to="/projects/ageCalculate" className="projectN" style={{ color: "green" }}>
+            <Link to="/projects/age-calculate" className="projectN" style={{ color: "green" }}>
               | 2.Age-Calculator |
             </Link>
             <Link to="https://github.com/BableshAAzad/pdf-merge-main" target="_blank" className="projectN">
@@ -46,32 +47,32 @@ export default function Home(props) {
             <Link to="/" className="projectM">
               | 4.News-App |
             </Link>
-            <Link to="/projects/analogClock" className="projectN" style={{ color: "green" }}>
+            <Link to="/projects/analog-clock" className="projectN" style={{ color: "green" }}>
               | 5.Analog-Clock |
             </Link>
-            <Link to="/projects/basicCalculatorFirst" className="projectN">
+            <Link to="/projects/basic-calculator-first" className="projectN">
               | 6.Basic-Calculator-First |
             </Link>
-            <Link to="/" className="projectN" style={{ color: "green" }}>
+            <Link to="/projects/puzzle-game" className="projectN" style={{ color: "green" }}>
               | 7.Dot-Puzzle-Game |
             </Link>
           </div>
           <YoutubeData />
         </OpenPage>
         <OpenPage page={activePage} index={2}>
-          <Projects heading="Try Text Editor- Word counter, Charecter Counter, Remove Extra Spaces etc." />
+          <TextEditor heading="Try Text Editor- Word counter, Charecter Counter, Remove Extra Spaces etc." />
         </OpenPage>
         <OpenPage page={activePage} index={3}>
           <AgeCalculate />
         </OpenPage>
         <OpenPage page={activePage} index={4}>
-          <AnalogWatch />
+          <DotPuzzleGame />
         </OpenPage>
         <OpenPage page={activePage} index={5}>
-          <BasicCalculatorFirst />
+          <AnalogWatch />
         </OpenPage>
         <OpenPage page={activePage} index={6}>
-          Page6
+          <BasicCalculatorFirst />
         </OpenPage>
         <OpenPage page={activePage} index={7}>
           Page7
