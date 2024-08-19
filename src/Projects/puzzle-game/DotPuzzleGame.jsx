@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function DotPuzzel() {
+function DotPuzzleGame() {
     const gridSize = 5;
     const [points, setPoints] = useState([{ row: 0, col: 0 }]);
     const [visited, setVisited] = useState(new Set(["0,0"]));
@@ -115,4 +115,4 @@ function DotPuzzel() {
     );
 }
 
-export default DotPuzzel;
+export default DotPuzzleGame;

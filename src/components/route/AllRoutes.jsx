@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
-import '../../App.css';
-import Home from "../nabar-pages/Home";
-import Spinner from '../../components/spinner/Spinner';
 import { Route, Routes } from 'react-router-dom';
 import App from '../../App';
+import '../../App.css';
+import Spinner from '../../components/spinner/Spinner';
+import Home from "../nabar-pages/Home";
 
 // Lazy-loaded components
 const HowItWorks = React.lazy(() => import('../../components/about-us/HowItWorks'));
@@ -22,7 +22,7 @@ const AnalogWatch = React.lazy(() => import("../../projects/analog-clock/AnalogW
 const BasicCalculatorFirst = React.lazy(() => import('../../projects/basic-calculator-first/BasicCalculatorFirst'));
 const About = React.lazy(() => import("../../projects/text-editor/About"));
 const TextEditor = React.lazy(() => import('../../projects/text-editor/TextEditor'));
-const DotPuzzel = React.lazy(() => import('../../projects/puzzel-game/DotPuzzel'));
+const DotPuzzleGame = React.lazy(() => import('../../projects/puzzle-game/DotPuzzleGame'));
 
 
 function AllRoutes() {
@@ -49,7 +49,7 @@ function AllRoutes() {
                     <Route path="projects/ageCalculate" element={<AgeCalculate />} />
                     <Route path="projects/analogClock" element={<AnalogWatch />} />
                     <Route path="projects/basicCalculatorFirst" element={<BasicCalculatorFirst />} />
-                    <Route path='projects/puzzel-game' element={<DotPuzzel />} />
+                    <Route path='projects/puzzle-game' element={<DotPuzzleGame />} />
                     <Route path='projects/howItWorks' element={<HowItWorks />} />
 
                     {/* Footer Contact us pages */}

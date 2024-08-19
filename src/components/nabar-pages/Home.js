@@ -2,15 +2,15 @@ import { Box, Pagination, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
+import AgeCalculate from "../../projects/age-calculator/AgeCalculate";
+import AnalogWatch from "../../projects/analog-clock/AnalogWatch";
+import BasicCalculatorFirst from "../../projects/basic-calculator-first/BasicCalculatorFirst";
+import DotPuzzleGame from "../../projects/puzzle-game/DotPuzzleGame";
 import Projects from '../../projects/text-editor/TextEditor';
 import BableshAAzad from "../navbar/home-page/BableshAAzad";
 import HeroSection from "../navbar/home-page/HeroSection";
 import YoutubeData from "../navbar/home-page/YoutubeData";
 import "./Homecs.css";
-import AgeCalculate from "../../projects/age-calculator/AgeCalculate";
-import DotPuzzel from "../../projects/puzzel-game/DotPuzzel"
-import AnalogWatch from "../../projects/analog-clock/AnalogWatch"
-import BasicCalculatorFirst from "../../projects/basic-calculator-first/BasicCalculatorFirst"
 
 const OpenPage = (props) => {
   const { children, page, index } = props;
@@ -53,8 +53,8 @@ export default function Home(props) {
             <Link to="/projects/basicCalculatorFirst" className="projectN">
               | 6.Basic-Calculator-First |
             </Link>
-            <Link to="/projects/puzzel-game" className="projectN" style={{ color: "green" }}>
-              | 7.Dot Puzzel |
+            <Link to="/projects/puzzle-game" className="projectN" style={{ color: "green" }}>
+              | 7.Dot-Puzzle-Game |
             </Link>
           </div>
           <YoutubeData />
@@ -66,7 +66,7 @@ export default function Home(props) {
           <AgeCalculate />
         </OpenPage>
         <OpenPage page={activePage} index={4}>
-          <DotPuzzel />
+          <DotPuzzleGame />
         </OpenPage>
         <OpenPage page={activePage} index={5}>
           <AnalogWatch />
