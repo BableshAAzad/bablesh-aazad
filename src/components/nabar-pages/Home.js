@@ -5,7 +5,6 @@ import "../../App.css";
 import AgeCalculate from "../../projects/age-calculator/AgeCalculate";
 import AnalogWatch from "../../projects/analog-clock/AnalogWatch";
 import BasicCalculatorFirst from "../../projects/basic-calculator-first/BasicCalculatorFirst";
-import DotPuzzleGame from "../../projects/puzzlegame/DotPuzzleGame";
 import Projects from '../../projects/text-editor/TextEditor';
 import BableshAAzad from "../navbar/home-page/BableshAAzad";
 import HeroSection from "../navbar/home-page/HeroSection";
@@ -53,7 +52,7 @@ export default function Home(props) {
             <Link to="/projects/basicCalculatorFirst" className="projectN">
               | 6.Basic-Calculator-First |
             </Link>
-            <Link to="/projects/puzzleGame" className="projectN" style={{ color: "green" }}>
+            <Link to="/" className="projectN" style={{ color: "green" }}>
               | 7.Dot-Puzzle-Game |
             </Link>
           </div>
@@ -66,13 +65,13 @@ export default function Home(props) {
           <AgeCalculate />
         </OpenPage>
         <OpenPage page={activePage} index={4}>
-          <DotPuzzleGame />
-        </OpenPage>
-        <OpenPage page={activePage} index={5}>
           <AnalogWatch />
         </OpenPage>
-        <OpenPage page={activePage} index={6}>
+        <OpenPage page={activePage} index={5}>
           <BasicCalculatorFirst />
+        </OpenPage>
+        <OpenPage page={activePage} index={6}>
+          Page6
         </OpenPage>
         <OpenPage page={activePage} index={7}>
           Page7

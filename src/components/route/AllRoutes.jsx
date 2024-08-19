@@ -22,8 +22,6 @@ const AnalogWatch = React.lazy(() => import("../../projects/analog-clock/AnalogW
 const BasicCalculatorFirst = React.lazy(() => import('../../projects/basic-calculator-first/BasicCalculatorFirst'));
 const About = React.lazy(() => import("../../projects/text-editor/About"));
 const TextEditor = React.lazy(() => import('../../projects/text-editor/TextEditor'));
-const DotPuzzleGame = React.lazy(() => import('../../projects/puzzlegame/DotPuzzleGame.jsx'));
-
 
 function AllRoutes() {
     return (
@@ -49,7 +47,6 @@ function AllRoutes() {
                     <Route path="projects/ageCalculate" element={<AgeCalculate />} />
                     <Route path="projects/analogClock" element={<AnalogWatch />} />
                     <Route path="projects/basicCalculatorFirst" element={<BasicCalculatorFirst />} />
-                    <Route path='projects/puzzleGame' element={<DotPuzzleGame />} />
                     <Route path='projects/howItWorks' element={<HowItWorks />} />
 
                     {/* Footer Contact us pages */}
