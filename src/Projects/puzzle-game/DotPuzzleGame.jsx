@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 
 function DotPuzzleGame() {
     const gridSize = 5;
@@ -115,4 +115,4 @@ function DotPuzzleGame() {
     );
 }
 
-export default DotPuzzleGame;
+export default memo(DotPuzzleGame);
