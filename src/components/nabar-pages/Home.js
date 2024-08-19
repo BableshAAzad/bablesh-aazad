@@ -53,7 +53,7 @@ export default function Home(props) {
             <Link to="/projects/basicCalculatorFirst" className="projectN">
               | 6.Basic-Calculator-First |
             </Link>
-            <Link to="/projects/puzzle-game" className="projectN" style={{ color: "green" }}>
+            <Link to="/projects/puzzleGame" className="projectN" style={{ color: "green" }}>
               | 7.Dot-Puzzle-Game |
             </Link>
           </div>

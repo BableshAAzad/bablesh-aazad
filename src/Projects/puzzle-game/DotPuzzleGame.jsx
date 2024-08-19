@@ -90,10 +90,10 @@ function DotPuzzleGame() {
                                     style={{
                                         width: '50px',
                                         height: '50px',
-                                        backgroundColor: points.some(point => point.row === row && point.col === col) 
-                                            ? (lockPoint && lockPoint.row === row && lockPoint.col === col 
-                                                ? '#ff69b4' 
-                                                : '#dc3545') 
+                                        backgroundColor: points.some(point => point.row === row && point.col === col)
+                                            ? (lockPoint && lockPoint.row === row && lockPoint.col === col
+                                                ? '#ff69b4'
+                                                : '#dc3545')
                                             : '#007bff',
                                         borderRadius: '50%',
                                         cursor: 'pointer',

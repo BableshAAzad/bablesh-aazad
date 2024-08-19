@@ -49,7 +49,7 @@ function AllRoutes() {
                     <Route path="projects/ageCalculate" element={<AgeCalculate />} />
                     <Route path="projects/analogClock" element={<AnalogWatch />} />
                     <Route path="projects/basicCalculatorFirst" element={<BasicCalculatorFirst />} />
-                    <Route path='projects/puzzle-game' element={<DotPuzzleGame />} />
+                    <Route path='projects/puzzleGame' element={<DotPuzzleGame />} />
                     <Route path='projects/howItWorks' element={<HowItWorks />} />
 
                     {/* Footer Contact us pages */}
