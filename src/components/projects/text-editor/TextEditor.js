@@ -21,7 +21,7 @@ export default function TextEditor(props) {
     // const toggleMode = (cls) => {
     //     if (mode === 'light') {
     //         setMode('dark');
-    //         document.body.style.backgroundColor = '#042743';
+            // document.body.style.backgroundColor = '#042743';
     //         showAlert("Dark mode has been enabled", "success");
     //     }
     //     else {
@@ -37,7 +37,7 @@ export default function TextEditor(props) {
                 <h3>{props.heading}</h3>
                 <TextForm showAlert={showAlert} mode={mode} />
                 <button className='btn btn-success textAbout'>
-                    <Link className='textAboutLink' to='/projects/about'>About of Text-Editor</Link>
+                    <Link className='textAboutLink' to='/projects/text-editor/about'>About of Text-Editor</Link>
                 </button>
                 <Outlet />
             </div>

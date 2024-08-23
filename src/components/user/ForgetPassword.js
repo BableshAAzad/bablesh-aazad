@@ -32,7 +32,7 @@ export default function ForgetPassword() {
                 <Link to='/logIn' className='text-light'>LOGIN</Link>
               </div>
               <div className="forgotPasswordLink col-6 mt-2 text-right">
-                <Link to="/signUp" className='text-light'>SignUp</Link>
+                <Link to="/sign-up" className='text-light'>SignUp</Link>
               </div>
             </div>
           </form>

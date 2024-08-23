@@ -42,7 +42,7 @@ const Footer = () => {
           <div className="footer-link-wrapper">
             <div className="footer-link-items">
               <h2>About Us</h2>
-              <NavLink className="linka" to="/howItWorks">
+              <NavLink className="linka" to="/how-it-works">
                 How it works
               </NavLink>
               <NavLink className="linka" to="/careers">
@@ -51,7 +51,7 @@ const Footer = () => {
               <NavLink className="linka" to="/investors">
                 Investors
               </NavLink>
-              <NavLink className="linka" to="/termsOfServices">
+              <NavLink className="linka" to="/terms-of-services">
                 Terms of Service
               </NavLink>
             </div>
@@ -74,7 +74,7 @@ const Footer = () => {
           <div className="footer-link-wrapper">
             <div className="footer-link-items">
               <h2>Videos</h2>
-              <NavLink className="linka" to="/videoUpload">
+              <NavLink className="linka" to="/video-upload">
                 Submit Video
               </NavLink>
               <NavLink className="linka" to="/smbassadors">

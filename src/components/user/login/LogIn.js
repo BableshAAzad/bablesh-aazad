@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './LogIn.css';
-import p9 from './../../images/userImage.svg';
+import p9 from './../../../images/userImage.svg';
 
 export default function LogIn(props) {
   let location = useLocation();
@@ -40,10 +40,10 @@ export default function LogIn(props) {
 
             <div className="row">
               <div className="signUPLink col-6 mt-2">
-                <Link to='/SignUp' className='text-light'>SignUp</Link>
+                <Link to='/sign-up' className='text-light'>SignUp</Link>
               </div>
               <div className="forgotPasswordLink col-6 mt-2">
-                <Link to="/forgetPassword" className='text-light'> Forgot password? </Link>
+                <Link to="/forget-password" className='text-light'> Forgot password? </Link>
               </div>
             </div>
           </form>

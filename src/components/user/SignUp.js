@@ -25,7 +25,7 @@ export default function SignUp() {
             <div className="inputWraper">
               <div className="iputInner">
                 <div className="userIcon">
-                  <span class="material-symbols-outlined"> account_circle </span>
+                  <span className="material-symbols-outlined"> account_circle </span>
                 </div>
                 <input type="text" name="username" id="username" placeholder="USERNAME" />
               </div>
@@ -67,7 +67,7 @@ export default function SignUp() {
                 <Link to='/logIn' className='text-light'>LOGIN</Link>
               </div>
               <div className="forgotPasswordLink col-6 mt-2">
-                <Link to="/forgetPassword" className='text-light'> Forgot password? </Link>
+                <Link to="/forget-password" className='text-light'> Forgot password? </Link>
               </div>
             </div>
           </form>
