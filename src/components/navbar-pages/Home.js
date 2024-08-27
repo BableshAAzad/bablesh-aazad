@@ -35,26 +35,29 @@ export default function Home(props) {
             </h3>
           </section>
           <div className="proje mb-4" style={{ textWrap: "wrap" }}>
+          <Link to="https://ecommerce.bableshaazad.com" target="_blank"  className="projectN" style={{ color: "green" }}>
+              | 1.E-Commerce-Shopping-App |
+            </Link>
             <Link to="/projects/text-editor" className="projectN">
-              | 1.Text-Editor |
+              | 2.Text-Editor |
             </Link>
             <Link to="/projects/age-calculate" className="projectN" style={{ color: "green" }}>
-              | 2.Age-Calculator |
+              | 3.Age-Calculator |
             </Link>
             <Link to="https://github.com/BableshAAzad/pdf-merge-main" target="_blank" className="projectN">
-              | 3.Pdf-Merge |
+              | 4.Pdf-Merge |
             </Link>
-            <Link to="/" className="projectM">
-              | 4.News-App |
+            <Link to="https://github.com/BableshAAzad/NewsAppUsingReactJSfunctionComponent" target="_blank"  className="projectN" style={{ color: "green" }}>
+              | 5.News-App |
             </Link>
-            <Link to="/projects/analog-clock" className="projectN" style={{ color: "green" }}>
-              | 5.Analog-Clock |
+            <Link to="/projects/analog-clock" className="projectN">
+              | 6.Analog-Clock |
             </Link>
-            <Link to="/projects/basic-calculator-first" className="projectN">
-              | 6.Basic-Calculator-First |
+            <Link to="/projects/basic-calculator-first" className="projectN" style={{ color: "green" }}>
+              | 7.Basic-Calculator-First |
             </Link>
-            <Link to="/projects/puzzle-game" className="projectN" style={{ color: "green" }}>
-              | 7.Dot-Puzzle-Game |
+            <Link to="/projects/puzzle-game" className="projectN">
+              | 8.Dot-Puzzle-Game |
             </Link>
           </div>
           <YoutubeData />
