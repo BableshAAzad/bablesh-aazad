@@ -37,7 +37,7 @@ const YoutubeData = () => {
 
   useEffect(() => {
     Aos.init({
-      duration: 2000,
+      duration: 1000,
       once: false,
       offset: 100,
       easing: 'ease-out-cubic',
