@@ -43,7 +43,7 @@ export default function BableshAAzad(props) {
                                     <span>(Founder of BableshAAzad.com)</span>
                                 </div>
                                 <div className="d-flex flex-row align-items-center justify-content-center">
-                                    <p className="lead fw-normal mb-0 me-3">"I am a Full Stack Web Developer Application and Electronics and Communication Engineer. My dream is to provide affordable personal and professional websites for startups and businesses. I aim to showcase all products and services online, enabling users to search and find anything they want with a single click."</p>
+                                    <p className="lead fw-normal mb-0 me-3">"I am a Full Stack Web Application Developer and Electronics & Communication Engineer. My dream is to provide affordable personal and professional websites for startups and businesses. I aim to showcase all products and services online, enabling users to search and find anything they want with a single click."</p>
                                 </div>
                                 <footer className="blockquote-footer babFooter mt-4">From BableshAAzad.com</footer>
                                 <br />
