@@ -1,6 +1,5 @@
 ## 😁[BableshAAzad.com](https://www.bableshaazad.com)
-- This is static blogging website based on reactjs.
-- There i am mention my Blogges and mini reactjs projects.
+- This is a static blogging website based on ReactJS. Here, I showcase my blogs and mini ReactJS projects.
 
 ---
 
