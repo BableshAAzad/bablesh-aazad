@@ -10,15 +10,36 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "../navbar/home-page/Button";
 import "./Footer.css";
+import Aos from "aos";
 
 const Footer = () => {
+
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+      once: false, 
+      offset: 100,
+      easing: 'ease-in-sine',
+    });
+
+    const handleScroll = () => {
+      Aos.refresh(); // Refresh AOS animations on scroll
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // Cleanup scroll event
+    };
+  }, []);
+
   return (
     <>
-      <div className="footer-container">
+      <div className="footer-container" data-aos="fade-right">
         <section className="footer-subscription">
           <p className="footer-subscription-heading">
             Join for latest offer and updates news get in mail.

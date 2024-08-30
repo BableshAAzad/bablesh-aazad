@@ -28,7 +28,7 @@ export default function Home(props) {
       <Box>
         <OpenPage page={activePage} index={1}>
           <HeroSection heading="Want Affordable Website" />
-          <BableshAAzad heading="Hi I am Bablesh AAzad"></BableshAAzad>
+          <BableshAAzad heading="Hi I am Bablesh AAzad"/>
           <section id="mainMarquee">
             <h3 className="my-3" id='marqueeTag'>
               Visit my projects and use on your requirment

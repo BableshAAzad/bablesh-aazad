@@ -17,12 +17,15 @@ const OpenPage = (props) => {
 
 export default function Products(props) {
   const [activePage, setActivePage] = useState(1);
+
+
   return (
     <>
       <Box>
         <OpenPage page={activePage} index={1}>
-        <Cards heading="Check out these EPIC Templates!" />
+          <Cards heading="Check out these EPIC Templates!" />
         </OpenPage>
+
         <OpenPage page={activePage} index={2}>
           <Cards2 heading="Check out these EPIC Templates!" ></Cards2>
         </OpenPage>

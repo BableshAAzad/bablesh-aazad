@@ -6,7 +6,6 @@ import vloging from "../../../images/vloging.jpg"
 import social from "../../../images/social.jpg"
 import tour from "../../../images/tour.jpg"
 
-
 function Cards(props) {
   return (
     <div className='cards cardsDiv'>

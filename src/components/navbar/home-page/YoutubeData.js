@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import Aos from "aos";
 
 const YoutubeData = () => {
   const [subscriberCount, setSubscriberCount] = useState(0);
@@ -27,11 +28,30 @@ const YoutubeData = () => {
         // console.log("Fetched YouTube data:", data);
       } catch (error) {
         // console.log("Error fetching YouTube data:", error);
-        <h3 style={{color:"red"}}>Server Error</h3>
+        <h3 style={{ color: "red" }}>Server Error</h3>
       }
     };
 
     fetchData();
+  }, []);
+
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+      once: false,
+      offset: 100,
+      easing: 'ease-out-cubic',
+    });
+
+    const handleScroll = () => {
+      Aos.refresh(); // Refresh AOS animations on scroll
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // Cleanup scroll event
+    };
   }, []);
 
   return (
@@ -39,24 +59,25 @@ const YoutubeData = () => {
       <div className="container">
         <div className="yutubetirath">
           <div>
-            <h1 style={{color: "red", textAlign: "center", textShadow: "2px 2px #28FAE7"}}>Welecome to my Youtube Channel</h1>
-           <div className="youtubelink">
-           <Link
-                    to="https://www.youtube.com/channel/UCi1r-Lw0qoggZO0ri-7GyTQ"
-                    target="_blank"
-                    aria-label="Youtube"
-                  >
-                    <Button
-                      variant="contained"
-                      color="error"
-                      size="large"
-                      startIcon={<YouTubeIcon />}
-                       endIcon={<ThumbUpIcon />}
-                    >
-                      Subscribe My Channel
-                    </Button>
-            </Link>
-           </div>
+            <h1 style={{ color: "red", textAlign: "center", textShadow: "2px 2px #28FAE7" }}>Welecome to my Youtube Channel</h1>
+            <div className="youtubelink">
+              <Link
+                to="https://www.youtube.com/channel/UCi1r-Lw0qoggZO0ri-7GyTQ"
+                target="_blank"
+                aria-label="Youtube"
+              >
+                <Button
+                  variant="contained"
+                  color="error"
+                  size="large"
+                  startIcon={<YouTubeIcon />}
+                  endIcon={<ThumbUpIcon />}
+                  data-aos="fade-up"
+                >
+                  Subscribe My Channel
+                </Button>
+              </Link>
+            </div>
           </div>
           <div className="youtubedatas">
             <Box sx={{ flexGrow: 1, textAlign: "center" }}>
@@ -72,6 +93,7 @@ const YoutubeData = () => {
                       color="error"
                       size="large"
                       startIcon={<SubscriptionsIcon />}
+                      data-aos="fade-right"
                     >
                       Subscriber Count : {subscriberCount}
                     </Button>
@@ -88,6 +110,7 @@ const YoutubeData = () => {
                       color="error"
                       size="large"
                       endIcon={<OndemandVideoIcon />}
+                      data-aos="fade-left"
                     >
                       Video Count : {videoCount}
                     </Button>

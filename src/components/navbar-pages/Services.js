@@ -1,14 +1,35 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Services.css';
 import { Link } from 'react-router-dom';
 import mobile from './../../images/mobile.png';
 import travel from './../../images/travel.png';
 import programming from './../../images/programming.png';
+import Aos from 'aos';
 
 export default function Services(props) {
     const [isExpanded1, setIsExpanded1] = useState(false);
     const [isExpanded2, setIsExpanded2] = useState(false);
     const [isExpanded3, setIsExpanded3] = useState(false);
+
+    useEffect(() => {
+        Aos.init({
+          duration: 2000,
+          once: false, 
+          offset: 100,
+          easing: 'ease-out-cubic',
+        });
+    
+        const handleScroll = () => {
+          Aos.refresh(); // Refresh AOS animations on scroll
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll); // Cleanup scroll event
+        };
+      }, []);
+
     return (
         <>
             <div className="container mt-3 websi1">
@@ -28,7 +49,7 @@ export default function Services(props) {
                 <div className="container">
                     <div className="row">
                         {/* ... existing code ... */}
-                        <div className="col-md-4 mb-3">
+                        <div className="col-md-4 mb-3" data-aos="fade-down-right">
                             <div className="card shadow">
                                 {/* <img src={p6} className="w-100 border-bottom cardImg" alt="Freinds" /> */}
                                 <img src={mobile} className="w-100 border-bottom cardImg" alt="Freinds" />
@@ -51,7 +72,7 @@ export default function Services(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4 mb-3">
+                        <div className="col-md-4 mb-3" data-aos="flip-up">
                             <div className="card shadow">
                                 {/* <img src={p4} className="w-100 border-bottom cardImg" alt="Freinds" /> */}
                                 <img src={travel} className="w-100 border-bottom cardImg" alt="Freinds" />
@@ -74,7 +95,7 @@ export default function Services(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4 mb-3">
+                        <div className="col-md-4 mb-3" data-aos="fade-down-left">
                             <div className="card shadow">
                                 {/* <img src={p5} className="w-100 border-bottom cardImg" alt="Freinds" /> */}
                                 <img src={programming} className="w-100 border-bottom cardImg" alt="Freinds" />
