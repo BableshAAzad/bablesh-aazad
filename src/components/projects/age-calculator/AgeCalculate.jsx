@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import DateObject from "react-date-object";
 import "./AgeCalculator.mdule.css";
 
 function AgeCalculate() {
+  useEffect(() => {
+    document.title = "Age Calculator - Bableshaazad.com";
+  }, []);
+
   function ageCalc() {
     //~collect input from HTML form and convert into date format
     let userinput = document.getElementById("DOB").value;
@@ -93,7 +97,7 @@ function AgeCalculate() {
       //~when current date is same as dob(date of birth)
       else ageString = "Welcome to Earth! <br> It's first day on Earth!";
 
-      //~display the calculated age
+      //~ display the calculated age
       return document.getElementById("result").innerHTML = ageString;
     }
   }

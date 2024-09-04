@@ -5,6 +5,7 @@ import "../../App.css";
 import Cards from "../navbar/product-page/Cards";
 import Cards2 from "../navbar/product-page/Cards2";
 import "./Products.css";
+import { Helmet } from "react-helmet";
 
 const OpenPage = (props) => {
   const { children, page, index } = props;
@@ -18,9 +19,12 @@ const OpenPage = (props) => {
 export default function Products(props) {
   const [activePage, setActivePage] = useState(1);
 
-
   return (
     <>
+      <Helmet>
+        <title>Products - Work samples | BableshAAzad.com</title>
+        <meta name="description" content="Website design training provide, Study materials and Source codes, Traveling Instructions, Diet plans etc." />
+      </Helmet>
       <Box>
         <OpenPage page={activePage} index={1}>
           <Cards heading="Check out these EPIC Templates!" />
