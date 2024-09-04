@@ -8,10 +8,15 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { Helmet } from "react-helmet";
 
 const Support = () => {
   return (
     <>
+      <Helmet>
+        <title>Support - BableshAAzad.com</title>
+        <meta name="description" content="You will follow us and support our efforts to build a large and robust network." />
+      </Helmet>
       <div className="support text-center">
         <h3 className="text-secondary">Contact Details</h3>
         <br />
@@ -56,7 +61,7 @@ const Support = () => {
                 rel="noopener noreferrer"
                 className="sharad text-info"
               >
-                <TwitterIcon/>
+                <TwitterIcon />
               </Link>
               <br />
               <Link

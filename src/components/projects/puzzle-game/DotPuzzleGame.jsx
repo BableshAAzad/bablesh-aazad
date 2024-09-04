@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react';
+import React, { useState, memo, useEffect } from 'react';
 
 function DotPuzzleGame() {
     const gridSize = 5;
@@ -6,6 +6,10 @@ function DotPuzzleGame() {
     const [visited, setVisited] = useState(new Set(["0,0"]));
     const [isLocked, setIsLocked] = useState(false);
     const [lockPoint, setLockPoint] = useState(null);
+
+    useEffect(() => {
+        document.title = "Dot Puzzle Game - Bableshaazad.com";
+      }, []);
 
     const handleMouseMove = (row, col) => {
         if (!isLocked) {

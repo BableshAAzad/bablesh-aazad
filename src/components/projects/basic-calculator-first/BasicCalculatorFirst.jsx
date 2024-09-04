@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 import "./BasicCalculatorFirst.css";
 
 let initialVal = 0;
@@ -18,6 +18,11 @@ function BasicCalculatorFirst() {
     let [val1, setVal1] = useState([]);
     let [val2, setVal2] = useState([]);
     let [val, dispatcher] = useReducer(reducer, initialVal);
+
+    useEffect(() => {
+        document.title = "Basic Calculator - Bableshaazad.com";
+      }, []);
+
     let getVal1 = ({ target: { value } }) => {
         setVal1(parseInt(value))
     }

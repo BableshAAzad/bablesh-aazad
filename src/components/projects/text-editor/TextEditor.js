@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import Alert from './Alert';
 import './TextEditor.css';
@@ -7,6 +7,10 @@ import TextForm from './TextForm';
 export default function TextEditor(props) {
     const [mode] = useState('light'); //whether dark mode is enabled or not
     const [alert, setAlert] = useState(null);
+
+    useEffect(() => {
+        document.title = "Text Editor - Bableshaazad.com";
+      }, []);
 
     const showAlert = (message, type) => {
         setAlert({
@@ -18,18 +22,6 @@ export default function TextEditor(props) {
         }, 1500);
     }
 
-    // const toggleMode = (cls) => {
-    //     if (mode === 'light') {
-    //         setMode('dark');
-            // document.body.style.backgroundColor = '#042743';
-    //         showAlert("Dark mode has been enabled", "success");
-    //     }
-    //     else {
-    //         setMode('light');
-    //         document.body.style.backgroundColor = 'white';
-    //         showAlert("Light mode has been enabled", "success");
-    //     }
-    // }
     return (
         <>
             <Alert alert={alert} />

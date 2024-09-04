@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,11 +9,37 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { Helmet } from "react-helmet";
+import Aos from "aos";
 
 export default function Contact(props) {
+
+  useEffect(() => {
+    Aos.init({
+        duration: 2000,
+        once: false,
+        offset: 500,
+        easing: 'ease-out-cubic',
+    });
+
+    const handleScroll = () => {
+        Aos.refresh(); // Refresh AOS animations on scroll
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll); // Cleanup scroll event
+    };
+}, []);
+
   return (
-    <div>
-      <div className="container mt-3">
+    <>
+      <Helmet>
+        <title>Contact - BableshAAzad.com</title>
+        <meta name="description" content="You can connect with us through any social media platform, or if you have any queries, feel free to ask anything." />
+      </Helmet>
+      <div className="container mt-3" data-aos="fade-left">
         <h3 className="text-info">{props.heading}</h3>
         <hr />
         <form className="row g-3 formCol">
@@ -247,6 +273,6 @@ export default function Contact(props) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

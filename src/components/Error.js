@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
 function Error() {
+
+    useEffect(() => {
+        document.title = "Error - Bableshaazad.com";
+      }, []);
 
         const lalitt = {
             marginTop: "200px",

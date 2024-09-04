@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './SignUp.css';
 import p9 from './../../images/userImage.svg'
 
 export default function SignUp() {
+
+  useEffect(() => {
+    document.title = "SignUp - Bableshaazad.com";
+  }, []);
+
   return (
     <>
       <div className='mainPageSignUp'>

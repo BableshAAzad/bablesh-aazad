@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ForgetPassword.css';
 import p9 from './../../images/userImage.svg';
 
 export default function ForgetPassword() {
+
+  useEffect(() => {
+    document.title = "Forget Password - Bableshaazad.com";
+  }, []);
+
   return (
     <div>
       <>

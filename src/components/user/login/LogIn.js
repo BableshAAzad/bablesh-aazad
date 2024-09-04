@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './LogIn.css';
 import p9 from './../../../images/userImage.svg';
 
 export default function LogIn(props) {
   let location = useLocation();
+
+  useEffect(() => {
+    document.title = "Login - Bableshaazad.com";
+  }, []);
+
+
   const st = location.state && location.state.st;
   return (
     <>

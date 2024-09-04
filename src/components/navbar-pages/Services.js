@@ -5,6 +5,7 @@ import mobile from './../../images/mobile.png';
 import travel from './../../images/travel.png';
 import programming from './../../images/programming.png';
 import Aos from 'aos';
+import { Helmet } from 'react-helmet';
 
 export default function Services(props) {
     const [isExpanded1, setIsExpanded1] = useState(false);
@@ -13,25 +14,29 @@ export default function Services(props) {
 
     useEffect(() => {
         Aos.init({
-          duration: 2000,
-          once: false, 
-          offset: 100,
-          easing: 'ease-out-cubic',
+            duration: 2000,
+            once: false,
+            offset: 100,
+            easing: 'ease-out-cubic',
         });
-    
+
         const handleScroll = () => {
-          Aos.refresh(); // Refresh AOS animations on scroll
+            Aos.refresh(); // Refresh AOS animations on scroll
         };
-    
+
         window.addEventListener('scroll', handleScroll);
-    
+
         return () => {
-          window.removeEventListener('scroll', handleScroll); // Cleanup scroll event
+            window.removeEventListener('scroll', handleScroll); // Cleanup scroll event
         };
-      }, []);
+    }, []);
 
     return (
         <>
+            <Helmet>
+                <title>Services - Website Designing | Training | Development</title>
+                <meta name="description" content="Website design, web development, affordable websites, coding training, travel guidance, gym training etc." />
+            </Helmet>
             <div className="container mt-3 websi1">
                 <div className="jumbotron">
                     {/* <img src={p4} className="jumboImg" alt="BableshAAzad" /> */}

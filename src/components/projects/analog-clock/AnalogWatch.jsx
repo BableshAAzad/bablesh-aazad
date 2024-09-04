@@ -5,6 +5,10 @@ function AnalogWatch() {
     const [time, setTime] = useState(new Date());
 
     useEffect(() => {
+        document.title = "Analog Clock - Bableshaazad.com";
+      }, []);
+
+    useEffect(() => {
         const intervalID = setInterval(() => {
             setTime(new Date());
         }, 1000);

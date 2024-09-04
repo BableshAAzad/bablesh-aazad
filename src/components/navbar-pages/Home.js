@@ -1,5 +1,5 @@
 import { Box, Pagination, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
 import AgeCalculate from "../projects/age-calculator/AgeCalculate";
@@ -11,6 +11,7 @@ import BableshAAzad from "../navbar/home-page/BableshAAzad";
 import HeroSection from "../navbar/home-page/HeroSection";
 import YoutubeData from "../navbar/home-page/YoutubeData";
 import "./Homecs.css";
+import { Helmet } from "react-helmet";
 
 const OpenPage = (props) => {
   const { children, page, index } = props;
@@ -23,19 +24,24 @@ const OpenPage = (props) => {
 
 export default function Home(props) {
   const [activePage, setActivePage] = useState(1);
+
   return (
     <>
+      <Helmet>
+        <title>Affordable and Cheapest Website Designing | Raipur, Chhattisgarh, India - BableshAAzad.com</title>
+        <meta name="description" content="I am a Full Stack Web Application Developer and Electronics & Communication Engineer. My dream is to provide affordable personal and professional websites for startups and businesses. I aim to showcase all products and services online, enabling users to search and find anything they want with a single click" />
+      </Helmet>
       <Box>
         <OpenPage page={activePage} index={1}>
           <HeroSection heading="Want Affordable Website" />
-          <BableshAAzad heading="Hi I am Bablesh AAzad"/>
+          <BableshAAzad heading="Hi I am Bablesh AAzad" />
           <section id="mainMarquee">
             <h3 className="my-3" id='marqueeTag'>
               Visit my projects and use on your requirment
             </h3>
           </section>
           <div className="proje mb-4" style={{ textWrap: "wrap" }}>
-          <Link to="https://ecommerce.bableshaazad.com" target="_blank"  className="projectN" style={{ color: "green" }}>
+            <Link to="https://ecommerce.bableshaazad.com" target="_blank" className="projectN" style={{ color: "green" }}>
               | 1.E-Commerce-Shopping-App |
             </Link>
             <Link to="/projects/text-editor" className="projectN">
@@ -47,7 +53,7 @@ export default function Home(props) {
             <Link to="https://github.com/BableshAAzad/pdf-merge-main" target="_blank" className="projectN">
               | 4.Pdf-Merge |
             </Link>
-            <Link to="https://github.com/BableshAAzad/NewsAppUsingReactJSfunctionComponent" target="_blank"  className="projectN" style={{ color: "green" }}>
+            <Link to="https://github.com/BableshAAzad/NewsAppUsingReactJSfunctionComponent" target="_blank" className="projectN" style={{ color: "green" }}>
               | 5.News-App |
             </Link>
             <Link to="/projects/analog-clock" className="projectN">

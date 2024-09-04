@@ -4,6 +4,7 @@ import App from '../../App';
 import '../../App.css';
 import Spinner from '../../components/spinner/Spinner';
 import Home from "../navbar-pages/Home.js";
+import Careers from '../footer/about-us/Careers.jsx';
 
 // Lazy-loaded components
 const HowItWorks = React.lazy(() => import('../../components/about-us/HowItWorks'));
@@ -103,6 +104,12 @@ function AllRoutes() {
                 <Route path='how-it-works' element={
                     <Suspense fallback={<Spinner />}>
                         <HowItWorks />
+                    </Suspense>
+                } />
+                {/* Footer About us pages */}
+                <Route path='careers' element={
+                    <Suspense fallback={<Spinner />}>
+                        <Careers />
                     </Suspense>
                 } />
 
